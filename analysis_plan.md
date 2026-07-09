@@ -1,0 +1,95 @@
+# Pre-registered analysis plan (FROZEN 2026-07-09, before any inferential analysis)
+
+Paper: "How Many Answers Before You Can Call a Student Overconfident? Reliability Boundaries and Minimum-Response Guidelines for Confidence-Calibration Indices in Large-Scale Mathematics Practice Data". Target venue: Practical Assessment, Research & Evaluation (PARE).
+
+This plan was frozen after descriptive data inspection only (row counts, per-student volume distribution, confidence-scale values, reporter vs non-reporter raw means) and before computing any reliability estimate, index correlation, or hypothesis test. Any later change is recorded as a dated deviation addendum at the bottom; addenda never overwrite the frozen text.
+
+## 1. Data (fixed)
+
+Eedi NeurIPS 2020 Education Challenge (Wang et al. 2020, arXiv:2007.12061), local zip reused from paper 8 workspace (see `data/PROVENANCE.md`).
+
+- **Primary sample (S1):** `train_task_1_2.csv` joined 1:1 to `answer_metadata_task_1_2.csv` on AnswerId. 15,867,850 responses, 118,971 students. Confidence-tagged (non-missing Confidence in [0,100]): 1,506,052 responses from 39,842 students. (Metadata-level tagged count before the train join is 1,882,692; the difference is answers not present in the train split. The analysis set is the train join because correctness is required.)
+- **Replication sample (S2):** `train_task_3_4.csv` joined to `answer_metadata_task_3_4.csv`. 1,382,727 responses, 4,918 students; tagged 346,428 from 4,284 students. Different question pool (948 vs 27,613 questions). Student IDs are anonymized per dataset, so cross-sample student overlap can neither be confirmed nor excluded; S2 is treated as an internal replication in a second sample from the same platform, not an independent population.
+- Confidence scale is fully discrete: {0, 25, 50, 75, 100} (verified; a 5-point selector, not a continuous slider). Confidence is rescaled to c = Confidence/100 in [0,1]. Correctness x in {0,1}.
+- Fixed descriptives frozen here: S1 median tagged responses per reporting student = **15** (mean 37.8); students with >= 20 tagged = 17,156; >= 50 = 8,387; >= 100 = 3,738; >= 200 = 1,389. S2 median = 31; >= 200 = 554. Reporters vs non-reporters (S1): mean student-level accuracy 0.602 vs 0.671; median response volume 121 vs 79.
+
+## 2. Indices (per student, computed on that student's tagged responses)
+
+Confirmatory index set (4):
+1. **Bias** = mean(c_i) - mean(x_i). Positive = overconfidence. (Schraw's bias index.)
+2. **Absolute accuracy (Brier)** = mean((c_i - x_i)^2). Lower = better calibrated.
+3. **Relative accuracy (gamma)** = Goodman-Kruskal gamma between the 5-point confidence and correctness.
+4. **Relative accuracy (AUROC)** = area under the ROC curve of confidence predicting correctness (ties handled by rank/Mann-Whitney formula).
+
+Exploratory index set: Murphy decomposition of the Brier score over the 5 native confidence bins (calibration component, resolution component); coarse-scale-robust bias variant **bias3** using the 3-category coarsening c3 in {0, 0.5, 1} for confidence {0 or 25, 50, 75 or 100}; extreme-response rate (share of responses at 0 or 100) as a descriptive response-style covariate.
+
+Undefined-value protocol (frozen): gamma and AUROC are undefined when a student has zero variance in confidence or in correctness within the analyzed response set; such students are excluded from that index's reliability estimate at that N, and the percentage undefined is reported at every N as a substantive result (indices that are frequently incomputable at small N are practically unusable at small N).
+
+## 3. Reliability machinery
+
+- **Split-half with Spearman-Brown.** For a student with a fixed set of N analyzed responses: randomly permute (seeded), split into two halves of N/2, compute the index on each half, correlate across students (Pearson), Spearman-Brown correct r_N = 2r/(1+r). Monte Carlo average over **R = 50** random splits; the reliability estimate at N is the mean SB-corrected correlation across the 50 splits.
+- **Response-set construction at each N.** Grid **N in {5, 10, 20, 50, 100, 200}**.
+  - **Design A (primary, population-constant):** pool = S1 students with >= 200 tagged responses (n = 1,389). For each N, subsample N tagged responses per student uniformly without replacement (seeded), then split-half. Same students at every N, so the curve shape is not confounded by population change.
+  - **Design B (ecological, all-eligible):** for each N, all students with >= N tagged responses contribute a random subsample of N of their tagged responses (seeded). Population varies with N as it does in practice.
+  - A grid point is reported only if the design's pool has >= 300 students (all points qualify in S1 under both designs; S2 Design A pool = 554).
+- **Temporal split-half (state sensitivity):** same as above but the split is first half vs second half by DateAnswered instead of random; difference between temporal and random split-half reliability indicates temporally clustered (state) variance.
+- **Test-retest (trait stability, exploratory):** students with >= 20 tagged responses in each of two windows: window A = first 28 days from the student's first tagged response; window B = from day 57 onward. Pearson correlation of the index across windows, plus attenuation-corrected value using the Design-B reliability at the window median N.
+- **Uncertainty:** bootstrap over students, **B = 1000**, seed 42, percentile 95% CIs, for every reliability estimate and every derived quantity (min-N, curve differences).
+- **Minimum-N estimation:** primary = smallest N at which the Design-A reliability curve crosses r = .70 (and .80), by linear interpolation of r against log N between adjacent grid points (extrapolation beyond 200 reported as "> 200"). Secondary check = Spearman-Brown prophecy projection anchored at N = 20. Both reported per index; disagreement discussed.
+
+## 4. Confirmatory hypotheses (frozen; Holm correction as specified)
+
+Family {H1, H2, H3}, plus an inner Holm family inside H2, all one-sided, alpha = .05.
+
+- **H1.** In S1 Design A, the split-half (SB-corrected, random-split) reliability of the **bias** index at **N = 20** is **below .70**. Decision rule: the one-sided 95% bootstrap upper bound of r(20) is < .70.
+- **H2.** For **every** confirmatory index (bias, Brier, gamma, AUROC), the minimum-N for r >= .70 exceeds the S1 median per-student tagged volume (**15**). Decision rule: per index, one-sided p = share of bootstrap draws with interpolated r(15) >= .70; Holm across the 4 indices; H2 is supported only if all 4 reject.
+- **H3.** Empirical-Bayes shrinkage improves low-N person-ranking stability of the bias index in the ecological setting. Setup: all S1 students with >= 10 tagged responses; each student's tagged responses are randomly split in half (seeded; one split, plus the 50-split Monte Carlo average as the reported estimate); within each half, raw bias per student and EB-shrunken bias per student (normal-normal model: shrink toward the half's grand mean with weight tau^2/(tau^2 + s2_i/n_i); tau^2 by method of moments across students, s2_i from within-student variance of (c - x)). Metric: Spearman correlation between half-A and half-B person estimates. Decision rule: paired bootstrap over students of (rho_EB - rho_raw); one-sided 95% lower bound > 0. Secondary (exploratory) metric: Jaccard overlap of the top-decile "most overconfident" sets across halves.
+- **Multiplicity:** Holm over the family {H1, H2, H3} using each hypothesis's headline p-value (for H2 the largest Holm-adjusted inner p).
+- Granularity note: with B = 1000 bootstrap draws the smallest reportable one-sided p is 1/1000; p values are reported as < .001 in that case.
+
+## 5. Accuracy confound (exploratory, pre-specified)
+
+- Report the mechanical dependence: student-level correlation of each index with accuracy at N = 20 and N = 100 (Design A).
+- Accuracy-partialed reliability: residualize each half's index on the same half's accuracy across students; SB-corrected correlation of residuals = reliability of the accuracy-independent component.
+- Report how the "most overconfident decile" membership changes after partialing (Jaccard).
+
+## 6. Selection analysis (exploratory, pre-specified)
+
+- Response-level: within students who report at least once, compare accuracy of tagged vs untagged responses (within-student paired difference, CI by student bootstrap).
+- Student-level: reporters vs non-reporters on accuracy and volume (already-seen raw means are frozen above; add standardized differences and logistic model of reporting on accuracy + log volume + first-activity month).
+- Sensitivity: recompute the S1 Design-B reliability at N = 20 weighting students by inverse estimated reporting propensity (logistic model above); report weighted vs unweighted difference.
+
+## 7. Replication protocol (S2)
+
+Replicate: Design A + B curves, min-N table, H1/H2/H3 point estimates with CIs. Replication criteria (qualitative, frozen): (a) r(20) for bias < .70; (b) min-N for r >= .70 exceeds S2's own median volume (31) for at least 3 of 4 indices; (c) rho_EB - rho_raw > 0. No new confirmatory p-values in S2.
+
+## 8. Seeds and software
+
+Master seed 42 (numpy default_rng; per-task child seeds spawned deterministically). R = 50 splits, B = 1000 bootstrap. Python/pandas/numpy/scipy; versions pinned in `scripts/requirements.txt` at package time.
+
+## 9. Reporting commitments
+
+- Page-one deliverable: per-index minimum-N decision table (r = .70 and .80 thresholds, both designs, both samples) with CIs.
+- Percentage-undefined table for gamma/AUROC at every N.
+- All confirmatory results reported regardless of direction; a null on any hypothesis is reported as a null. Honest-ceiling note from NEXT_PAPER_BRIEF_2.md governs claim strength.
+- Low reliability at small N is framed as quantification of an expected measurement phenomenon (Schraw 2013; Guggenmos 2021 lineage), not a surprise discovery.
+
+---
+
+## Deviation addenda (dated; append-only)
+
+**Addendum 1 (2026-07-09, post round-1 simulated review; all items are additions motivated by reviewer critiques, none alters a frozen confirmatory definition or decision rule):**
+1. Design A grid densified to N in {5, 10, 12, 15, 20, 25, 30, 40, 50, 100, 200} as an interpolation-sensitivity check; Design B keeps the original 6-point grid. The confirmatory H2 quantity remains the FROZEN log-linear interpolation of r(15) between N=10 and N=20; the directly estimated r(15) is reported alongside as sensitivity. Random-stream note: subsampling/split RNG switched from one shared stream to per-(design, N, sample) child seeds spawned from the master seed, so grid composition cannot silently shift other grid points; all curve estimates are regenerated under this scheme and the manuscript reports the regenerated values.
+2. Undefined shares reported BOTH as half-based (as frozen; determines exclusion from reliability estimation) and full-N-set based (practitioner-facing incomputability), to resolve an ambiguity in the frozen text.
+3. Mean confidence ("conf") added to the reported index set: its reliability curve, plus a decomposition check of what the reliable bias variance is (correlations of accuracy-partialed bias half-scores with mean confidence at N=20/100). Exploratory.
+4. H3 certification null: permutation null preserving each student's volume n_i but permuting response-level (c - x) values across students (destroying person effects); shrinkage machinery rerun unchanged. Expected gain ~0 under the null.
+   4b (2026-07-09, after the null RAN and exposed a metric artifact): under the null the symmetric EB-vs-EB Spearman is strongly positive (S2: rho_eb = .47 from zero signal) because shrinkage weights depend on the volume n_i, which is shared across halves; the pre-registered H3 metric therefore overstates EB benefit. ADDED artifact-immune validation metric: cross-half asymmetric correlation rho(EB_A, raw_B) (and symmetrized average with rho(EB_B, raw_A)) versus rho(raw_A, raw_B), plus the analogous top-decile flag validation against the raw other-half criterion. Under the null the asymmetric EB correlation is expected ~0. H3's frozen decision rule is still reported as pre-registered, but interpretation is governed by the artifact-immune metric. This addendum was written after seeing the null result and before rerunning the real-data analysis with the new metric.
+5. Flag-consistency analysis (exploratory): Design A, both samples, N in {10, 15, 20, 30}: cross-half top-decile "most overconfident" Jaccard and percent agreement for the raw bias score. Note: with equal half-lengths, EB shrinkage is rank-preserving by construction, so EB flag gains exist only under variable volumes (H3 setting).
+6. Temporal-split descriptive: median elapsed days between the median dates of the earlier and later temporal halves, per N and sample.
+7. Decision table expanded to report Design B and Design A temporal minimum-N estimates: temporal min-N with joint-bootstrap CIs (population-constant pool permits joint resampling); Design B min-N as point estimates from curve interpolation only (per-N pools differ, so joint student resampling across the grid is undefined; stated in the table note).
+
+**Addendum 2 (2026-07-09, post round-2 simulated review; additions only, no frozen rule altered):**
+8. Flag consistency at FULL length N (round-2 correction of addendum 5, whose cross-half flags compared N/2-length scores and therefore understated flag stability "at N"): Design A pools, N in {10, 15, 20, 30, 50, 100} (2N <= 200 throughout), two DISJOINT N-response subsamples per student per repeat (seeded child streams), 50 repeats; top-decile Jaccard and retention for the raw bias score; analytic chance baseline for two independent decile sets (Jaccard ~ .053) reported alongside. Addendum-5 half-based values remain in the released results; the manuscript reports the disjoint full-N values.
+   Correction note to addendum 5's rationale: with equal half-lengths the VOLUME component of EB weights is constant but weights still vary through the within-student variance s2_i, so "rank-preserving" was too strong; EB flag effects are evaluated in the variable-volume H3 setting, where they are consequential.
+9. (4c) Permutation-null certification extended to flag metrics on the H3 pools: null cross-half top-decile Jaccard for raw-vs-raw, and null validation Jaccard for EB-vs-raw-criterion, same permutation scheme as addendum 4. Purpose: test whether the raw-raw flag baseline itself carries volume structure under the null (low-volume students have higher-variance means and could populate both tails), before interpreting the real-data raw-vs-EB flag comparison.
+10. Descriptives artifact: threshold-coverage shares (reporters with >= 15, 18, 26, 33 tagged answers) and the Table 1 descriptive values (mean confidence, tagged-answer accuracy, mean tagged answers per reporter) emitted to results/descriptives_{sample}.json so every manuscript number traces to a generated artifact.

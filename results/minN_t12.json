@@ -1,0 +1,212 @@
+{
+ "bias": {
+  "minN70_point": 14.669837999260144,
+  "minN80_point": 25.9817218445231,
+  "minN70_ci": [
+   13.09648568852559,
+   16.928159367476812
+  ],
+  "minN80_ci": [
+   23.41431807365175,
+   28.421454011286286
+  ],
+  "share_minN70_gt200": 0.0,
+  "share_minN80_gt200": 0.0,
+  "minN70_temporal_point": 20.430303578612744,
+  "minN80_temporal_point": 39.40400739178325,
+  "minN70_temporal_ci": [
+   14.539608086383236,
+   26.68645796525715
+  ],
+  "minN80_temporal_ci": [
+   34.57024597920347,
+   53.099273961170084
+  ],
+  "minN70_designB_point": 17.68405856438467,
+  "minN80_designB_point": 31.681144784778812,
+  "prophecy_minN70_from20": 15.261248566541083,
+  "r15_point": 0.6944000713332056,
+  "r15_direct_point": 0.7052023658356177,
+  "r15_ci": [
+   0.6685238289914595,
+   0.7203005262376435
+  ],
+  "p_r15_ge_070": 0.33,
+  "r20_point": 0.7535643092606885,
+  "r20_ci": [
+   0.7279084821805809,
+   0.7766229662979454
+  ],
+  "r20_upper_1sided95": 0.773972570034791
+ },
+ "brier": {
+  "minN70_point": 21.330261926424246,
+  "minN80_point": 34.30607080309567,
+  "minN70_ci": [
+   18.161508681981307,
+   23.925089622430857
+  ],
+  "minN80_ci": [
+   30.328733001804196,
+   38.392400406401535
+  ],
+  "share_minN70_gt200": 0.0,
+  "share_minN80_gt200": 0.0,
+  "minN70_temporal_point": 30.41482826891927,
+  "minN80_temporal_point": 55.95244811598474,
+  "minN70_temporal_ci": [
+   22.790433199071956,
+   33.91025011891756
+  ],
+  "minN80_temporal_ci": [
+   39.19098040833218,
+   69.18946070606455
+  ],
+  "minN70_designB_point": 27.866994488470333,
+  "minN80_designB_point": 44.960040582281906,
+  "prophecy_minN70_from20": 21.381539105845356,
+  "r15_point": 0.6196989463604261,
+  "r15_direct_point": 0.6440413357102327,
+  "r15_ci": [
+   0.5860622426835208,
+   0.6549380387820246
+  ],
+  "p_r15_ge_070": 0.0,
+  "r20_point": 0.6857883486696956,
+  "r20_ci": [
+   0.6536631555832467,
+   0.7171609212723776
+  ],
+  "r20_upper_1sided95": 0.7136910823764238
+ },
+ "gamma": {
+  "minN70_point": Infinity,
+  "minN80_point": Infinity,
+  "minN70_ci": [
+   null,
+   null
+  ],
+  "minN80_ci": [
+   null,
+   null
+  ],
+  "share_minN70_gt200": 1.0,
+  "share_minN80_gt200": 1.0,
+  "minN70_temporal_point": Infinity,
+  "minN80_temporal_point": Infinity,
+  "minN70_temporal_ci": [
+   null,
+   null
+  ],
+  "minN80_temporal_ci": [
+   null,
+   null
+  ],
+  "minN70_designB_point": Infinity,
+  "minN80_designB_point": Infinity,
+  "prophecy_minN70_from20": 204.81645219268762,
+  "r15_point": 0.14640308054548615,
+  "r15_direct_point": 0.18004171681630343,
+  "r15_ci": [
+   0.07374779795044645,
+   0.21054466553118883
+  ],
+  "p_r15_ge_070": 0.0,
+  "r20_point": 0.1855658021036621,
+  "r20_ci": [
+   0.08935483600967498,
+   0.2719706771586247
+  ],
+  "r20_upper_1sided95": 0.26016583265936694
+ },
+ "auroc": {
+  "minN70_point": 151.14476348274923,
+  "minN80_point": Infinity,
+  "minN70_ci": [
+   133.12574540722397,
+   171.96025836508707
+  ],
+  "minN80_ci": [
+   null,
+   null
+  ],
+  "share_minN70_gt200": 0.0,
+  "share_minN80_gt200": 1.0,
+  "minN70_temporal_point": Infinity,
+  "minN80_temporal_point": Infinity,
+  "minN70_temporal_ci": [
+   196.50790535351913,
+   null
+  ],
+  "minN80_temporal_ci": [
+   null,
+   null
+  ],
+  "minN70_designB_point": 151.12757669079215,
+  "minN80_designB_point": Infinity,
+  "prophecy_minN70_from20": 135.24208124873311,
+  "r15_point": 0.22476857023013277,
+  "r15_direct_point": 0.27091431235442115,
+  "r15_ci": [
+   0.16991492342719466,
+   0.27637913196764724
+  ],
+  "p_r15_ge_070": 0.0,
+  "r20_point": 0.25653888117777557,
+  "r20_ci": [
+   0.18932706041096986,
+   0.3211214450800126
+  ],
+  "r20_upper_1sided95": 0.3126199117074749
+ },
+ "flag_consistency_designA_bias": [
+  {
+   "N": 10,
+   "jaccard": 0.15121051237523397,
+   "pct_flags_retained": 0.2624460431654676
+  },
+  {
+   "N": 15,
+   "jaccard": 0.20523443075067033,
+   "pct_flags_retained": 0.34014388489208636
+  },
+  {
+   "N": 20,
+   "jaccard": 0.2504958770976649,
+   "pct_flags_retained": 0.4001438848920863
+  },
+  {
+   "N": 30,
+   "jaccard": 0.3021342570197365,
+   "pct_flags_retained": 0.4635971223021582
+  }
+ ],
+ "_meta": {
+  "sample": "t12",
+  "n_poolA": 1389,
+  "grid": [
+   5,
+   10,
+   12,
+   15,
+   20,
+   25,
+   30,
+   40,
+   50,
+   100,
+   200
+  ],
+  "grid_B": [
+   5,
+   10,
+   20,
+   50,
+   100,
+   200
+  ],
+  "R": 50,
+  "B": 1000,
+  "seed": 42
+ }
+}

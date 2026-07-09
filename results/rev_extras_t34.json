@@ -1,0 +1,102 @@
+{
+ "sample": "t34",
+ "temporal_gap_days": {
+  "5": {
+   "median_gap_days": 49.0,
+   "iqr": [
+    31.5,
+    70.875
+   ]
+  },
+  "10": {
+   "median_gap_days": 53.0,
+   "iqr": [
+    35.0,
+    79.0
+   ]
+  },
+  "12": {
+   "median_gap_days": 52.75,
+   "iqr": [
+    34.625,
+    79.0
+   ]
+  },
+  "15": {
+   "median_gap_days": 51.75,
+   "iqr": [
+    34.5,
+    77.875
+   ]
+  },
+  "20": {
+   "median_gap_days": 55.0,
+   "iqr": [
+    39.0,
+    77.75
+   ]
+  },
+  "25": {
+   "median_gap_days": 55.0,
+   "iqr": [
+    38.0,
+    76.5
+   ]
+  },
+  "30": {
+   "median_gap_days": 53.0,
+   "iqr": [
+    38.0,
+    80.0
+   ]
+  },
+  "40": {
+   "median_gap_days": 55.25,
+   "iqr": [
+    39.125,
+    80.0
+   ]
+  },
+  "50": {
+   "median_gap_days": 56.0,
+   "iqr": [
+    40.0,
+    82.0
+   ]
+  },
+  "100": {
+   "median_gap_days": 58.0,
+   "iqr": [
+    40.625,
+    80.0
+   ]
+  },
+  "200": {
+   "median_gap_days": 56.0,
+   "iqr": [
+    42.0,
+    80.0
+   ]
+  }
+ },
+ "bias_decomposition": {
+  "N20": {
+   "sb_bias": 0.7420257807209322,
+   "sb_conf": 0.9255744397802634,
+   "sb_acc": 0.7102268315798961,
+   "r_biasA_biasB": 0.5900725968826361,
+   "r_biasA_confB": 0.43202846123267,
+   "r_biasA_accB": -0.21907178761280136,
+   "r_partialedBias_conf_samehalf": 0.9123610509705264
+  },
+  "N100": {
+   "sb_bias": 0.9331066478059564,
+   "sb_conf": 0.9836162932661972,
+   "sb_acc": 0.9196067691283186,
+   "r_biasA_biasB": 0.8746331078920124,
+   "r_biasA_confB": 0.5810419446156189,
+   "r_biasA_accB": -0.31400074680148177,
+   "r_partialedBias_conf_samehalf": 0.8878698305070367
+  }
+ }
+}

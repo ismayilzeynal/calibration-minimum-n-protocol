@@ -1,0 +1,9 @@
+{
+ "sample": "t12",
+ "n_students": 23825,
+ "null_rho_raw": 0.00462120584403541,
+ "null_rho_eb": 0.13370806687943707,
+ "null_gain": 0.12908686103540165,
+ "null_rho_eb_validation": -0.004662676032530609,
+ "note": "person effects destroyed by cross-student permutation of (c - x); volumes n_i preserved; same machinery as H3; validation metric (EB_A vs raw_B) is expected ~0 under this null while the symmetric EB-vs-EB metric is inflated by shared shrinkage weights (addendum 4b)"
+}
