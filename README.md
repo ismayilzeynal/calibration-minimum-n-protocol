@@ -1,46 +1,96 @@
 # Minimum-Response Reliability Protocol for Confidence-Calibration Indices
 
-Code, pre-registered analysis plan, and derived aggregate results for the
-manuscript "How Many Answers Before You Can Call a Student Overconfident?
-Reliability Boundaries and Minimum-Response Guidelines for
-Confidence-Calibration Indices in Large-Scale Mathematics Practice Data"
-(under review). Author identity withheld for double-anonymous review.
+Code, the pre-specified analysis plan with its dated addenda, and derived
+aggregate results for the manuscript "How Many Rated Answers Does a
+Confidence-Calibration Score Need? Conditional Minimum-Response Estimates and
+a Reusable Protocol from Mathematics Practice Data" (under review, revised
+version). Author identity withheld for double-anonymous review.
+
+Version 1.0.0 of this repository accompanied the original submission. The
+`revision/` folder accompanies the revised manuscript; the original
+`scripts/` and `results/` are unchanged.
 
 ## What this is
 
-A transferable estimation protocol answering one question for any learning
-platform that collects item-level confidence: how many confidence-tagged
-responses does a student need before person-level calibration scores
-(bias, Brier, gamma, AUROC) are reliable enough to use?
+A reusable estimation protocol for one question that any learning platform
+collecting item-level confidence ratings can ask: how many rated answers does
+a student need before a person-level calibration score (signed bias, Brier
+score, gamma, AUROC) is reliable enough for a given use?
 
-Headline defaults from the two samples analyzed (Eedi mathematics data,
-1.85M confidence-tagged answers; random-split, Designs A and B):
+## Headline estimates (conditional on these data)
 
-| Index | N for r = .70 | N for r = .80 |
-|---|---|---|
-| Bias (over/underconfidence) | ~15-18 | ~26-33 |
-| Absolute accuracy (Brier) | ~21-32 | ~34-59 |
-| Relative accuracy (AUROC) | ~151-182 | > 200 |
-| Relative accuracy (gamma) | > 200 | > 200 |
+Number of rated answers per student at which split-half reliability
+(Spearman-Brown corrected, mean over 50 random splits) first reaches .70 or
+.80. Random-half ranges span both samples (Eedi mathematics practice data,
+1.85 million rated answers) and both sampling designs (A: the same students
+at every N; B: every student with at least N rated answers). Temporal halves
+(a student's earlier versus later answers) are Design A, both samples. AUROC
+under the plan rule (undefined whenever gamma is undefined) is primary; the
+Mann-Whitney tie convention, which gives .50 to a student with one constant
+rating, is a sensitivity analysis.
 
-Also in the released aggregates: temporal-split (conservative) thresholds,
-disjoint full-N flag-stability curves, permutation-null certifications of
-the shrinkage evaluation metrics, selection/IPW checks, and the
-accuracy-confound decomposition.
+| Index | .70, random halves | .80, random halves | .70, temporal halves | .80, temporal halves |
+|---|---|---|---|---|
+| Signed bias (over- or underconfidence) | about 15-18 | about 26-33 | about 20 | about 39-48 |
+| Brier score | about 21-32 | about 34-59 | about 30-48 | about 56-95 |
+| AUROC, plan rule | about 171-198 | > 200 | > 200 | > 200 |
+| AUROC, tie convention | about 151-182 | > 200 | > 200 | > 200 |
+| Gamma | > 200 | > 200 | > 200 | > 200 |
+
+Sources: `revision/results/baseline/results/minN_{t12,t34}.json` (bias,
+Brier, gamma, AUROC tie convention) and
+`revision/results/r1_A/prereg/results/minN_{t12,t34}.json` (AUROC plan
+rule). The estimates hold for this platform, subject, rating instrument and
+student pool; the protocol is meant to be rerun locally.
+
+## Layout
+
+- `analysis_plan.md`: the pre-specified analysis plan, frozen on 2026-07-09
+  before any inferential analysis, with dated, append-only addenda.
+  Addenda 1 and 2 were part of version 1.0.0; Addendum 3 (2026-11-24)
+  records the analyses added after the editor's decision. The first
+  15,027 bytes of the file are byte-identical to version 1.0.0. The title
+  line keeps the term "pre-registered" used at the original submission;
+  because the plan was first made public with that submission, the revised
+  manuscript calls it pre-specified.
+- `scripts/`, `results/`: original pipeline and aggregates (version 1.0.0).
+- `revision/scripts/`: revision analyses (exploratory, recorded in
+  Addendum 3) and reruns of the original code under the plan's AUROC rule.
+- `revision/results/`: aggregate outputs (the summary files `r1_*.json`
+  and `r2_*.json` carry a definitions block; CSV reliability curves;
+  figures).
+- `revision/Supplementary_Notes.md`: Supplementary Notes S1 to S4 of the
+  revised manuscript.
+
+Script docstrings call the revision folder `revision-2026-11/`; here it is
+`revision/`. Every revision script derives its paths from its own location,
+with the repository root in the role of the paper folder, so no path needs
+editing. Analysis groups: A (AUROC rule and the reruns), B (variance
+components, coefficient alpha, standard error of measurement), C (rated
+versus unrated answers, reweighting, halves by content, difficulty and term),
+D (what the bias score is made of; flag stability), and `r2_*` (bootstrap
+intervals over all draws, guess-corrected coding, pool sensitivity, level of
+bias, flag rules, figures).
+
+Not included: row-level data and anything derived per student. The
+per-student cache arrays (`data/cache/designA_*.npz`: split-half values per
+student and split) are regenerated by the run order below.
 
 ## Data
 
-Row-level data are NOT redistributed here (dataset license). Obtain the
+Row-level data are not redistributed here (dataset terms). Obtain the
 NeurIPS 2020 Education Challenge data ("Instructions and Guide for
 Diagnostic Questions", Wang et al. 2020, arXiv:2007.12061) from the
-official distribution, place `data.zip` where `scripts/common.py` expects
-it (see ZIP_PATH), and run the pipeline.
+official distribution and place `data.zip` at `data/raw/eedi/data.zip`, as
+`scripts/common.py` expects.
 
-## Reproduce
+## Reproduce: original pipeline
+
+Run from the repository root:
 
 ```
 pip install -r scripts/requirements.txt
-python scripts/reliability.py t12      # sample 1 curves + minimum-N
+python scripts/reliability.py t12      # sample 1 curves + minimum N
 python scripts/reliability.py t34      # sample 2 (replication)
 python scripts/rev_h3null.py t12       # permutation-null certification
 python scripts/rev_h3null.py t34
@@ -57,9 +107,73 @@ python scripts/results_gate.py
 python scripts/figures.py
 ```
 
-Master seed 42; 50 Monte Carlo splits; 1,000 bootstrap draws. The frozen
-pre-registration is `analysis_plan.md`; `results/` ships the derived
-aggregates behind every number in the manuscript.
+Master seed 42; 50 random splits; 1,000 bootstrap draws.
+
+## Reproduce: revision
+
+Run from the repository root, after `scripts/reliability.py` has built
+`data/resp_t12.parquet`, `data/resp_t34.parquet` and `data/cache/`. The
+revision scripts read the shipped `results/` files of version 1.0.0.
+
+```
+pip install -r revision/scripts/requirements.txt
+
+# baseline: rerun the original curves into revision/results/baseline
+python revision/scripts/extract_metadata.py data/raw/eedi/data.zip
+python -B revision/scripts/repro_baseline.py t12
+python -B revision/scripts/repro_baseline.py t34
+python -B revision/scripts/compare_baseline.py
+python -B revision/scripts/auroc_tie_diagnostic.py
+
+# A: AUROC under the plan rule and under the tie convention
+python -B revision/scripts/r1_A_indices_check.py
+python -B revision/scripts/r1_A_prereg_run.py reliability t12
+python -B revision/scripts/r1_A_prereg_run.py reliability t34
+python -B revision/scripts/r1_A_prereg_run.py confound t12
+python -B revision/scripts/r1_A_prereg_run.py confound t34
+python -B revision/scripts/r1_A_prereg_run.py confirmatory
+python -B revision/scripts/r1_A_mw_run.py
+python -B revision/scripts/r1_A_gate.py
+python -B revision/scripts/r1_A_light.py t12
+python -B revision/scripts/r1_A_light.py t34
+python -B revision/scripts/r1_A_summary.py
+
+# B: variance components, coefficient alpha, SEM
+python -B revision/scripts/r1_B_vc.py t12
+python -B revision/scripts/r1_B_vc.py t34
+python -B revision/scripts/r1_B_alpha.py t34
+python -B revision/scripts/r1_B_alpha.py t12
+python -B revision/scripts/r1_B_assemble.py
+
+# C: selection, reweighting, structured halves
+python -B revision/scripts/r1_C_selection.py t12
+python -B revision/scripts/r1_C_selection.py t34
+python -B revision/scripts/r1_C_splits.py t12
+python -B revision/scripts/r1_C_splits.py t34
+python -B revision/scripts/r1_C_assemble.py
+python -B revision/scripts/r1_C_report.py
+
+# D: decomposition and flag stability (writes revision/tmp/r1_D_*.json)
+python -B revision/scripts/r1_D_construct_flags.py t12
+python -B revision/scripts/r1_D_construct_flags.py t34
+python -B revision/scripts/r1_D_report.py
+
+# accuracy at each confidence level
+python -B revision/scripts/r1_W_calibration_table.py
+
+# r2: intervals over all draws, coding and pool sensitivity, levels, flags, figures
+python -B revision/scripts/r2_A_rerun.py
+python -B revision/scripts/r2_C_levels.py
+python -B revision/scripts/r2_D_flags.py
+python -B revision/scripts/r2_summary.py
+python -B revision/scripts/r2_figures.py
+```
+
+The revision reruns used Python 3.12.10 with
+`revision/scripts/requirements.txt` (numpy 2.4.6, scipy 1.18.1; the original
+pins were numpy 2.2.6 and scipy 1.16.1). Under these versions the original
+minimum-N files reproduce exactly and the reliability curves to at most
+3.0e-15 (`revision/results/baseline/compare_baseline.json`).
 
 ## License
 
