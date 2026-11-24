@@ -1,0 +1,88 @@
+{
+ "source": "scripts/indices.py lines 37-46 (unchanged)",
+ "hand_cases": {
+  "constant_conf_mixed_correct": {
+   "code_auroc": 0.5,
+   "code_gamma": null,
+   "brute_auroc": 0.5,
+   "brute_gamma": null,
+   "scipy_U_over_n1n0": 0.5,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "constant_conf_all_correct": {
+   "code_auroc": null,
+   "code_gamma": null,
+   "brute_auroc": null,
+   "brute_gamma": null,
+   "scipy_U_over_n1n0": null,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "varied_conf_all_correct": {
+   "code_auroc": null,
+   "code_gamma": null,
+   "brute_auroc": null,
+   "brute_gamma": null,
+   "scipy_U_over_n1n0": null,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "varied_conf_all_incorrect": {
+   "code_auroc": null,
+   "code_gamma": null,
+   "brute_auroc": null,
+   "brute_gamma": null,
+   "scipy_U_over_n1n0": null,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "perfect_resolution": {
+   "code_auroc": 1.0,
+   "code_gamma": 1.0,
+   "brute_auroc": 1.0,
+   "brute_gamma": 1.0,
+   "scipy_U_over_n1n0": 1.0,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "inverse_resolution": {
+   "code_auroc": 0.0,
+   "code_gamma": -1.0,
+   "brute_auroc": 0.0,
+   "brute_gamma": -1.0,
+   "scipy_U_over_n1n0": 0.0,
+   "auroc_match": true,
+   "gamma_match": true
+  },
+  "partial_ties": {
+   "code_auroc": 0.8333333333333334,
+   "code_gamma": 1.0,
+   "brute_auroc": 0.8333333333333334,
+   "brute_gamma": 1.0,
+   "scipy_U_over_n1n0": 0.8333333333333334,
+   "auroc_match": true,
+   "gamma_match": true
+  }
+ },
+ "random_vectors": {
+  "n": 5000,
+  "n_constant_conf_mixed_correct": 494,
+  "auroc_mismatch_vs_bruteforce": 0,
+  "gamma_mismatch_vs_bruteforce": 0,
+  "auroc_mismatch_vs_scipy_mannwhitneyu": 0
+ },
+ "real_S2_full_sets": {
+  "n_students": 4284,
+  "auroc_mismatch_vs_bruteforce": 0,
+  "gamma_mismatch_vs_bruteforce": 0,
+  "auroc_mismatch_vs_scipy_mannwhitneyu": 0,
+  "n_constant_conf_mixed_correct": 111,
+  "auroc_values_in_those_cases": [
+   0.5
+  ],
+  "gamma_nan_in_those_cases": 111
+ },
+ "conclusion": "Submitted code: AUROC = Mann-Whitney U/(n1*n0) with 0.5 tie credit; defined whenever both correct and incorrect responses exist; equals exactly .5 when confidence is constant and correctness varies. Gamma is NaN iff C + D = 0, i.e. constant confidence or constant correctness.",
+ "wall_seconds": 4.673926591873169
+}

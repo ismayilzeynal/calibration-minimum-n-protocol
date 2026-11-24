@@ -1,0 +1,274 @@
+{
+ "_definitions": {
+  "retention": "Dice overlap of the two flag sets (share of flagged students flagged again), as in stream D",
+  "matched_prevalence": "rank rule flags the top k students by bias, k = round(share flagged by the absolute rule x n); same sets and bootstrap draws",
+  "guess_coding": "c' = .25 + .75 c; +.15 rule evaluated by exact integer comparison",
+  "pool_sensitivity": "students with rated accuracy >= .99 or one constant rating on all their rated answers removed after the sets were drawn"
+ },
+ "S1": {
+  "sample": "t12",
+  "N": 20,
+  "n_pool": 1389,
+  "regression_vs_stream_D_max_abs_diff": 0.0,
+  "matched_prevalence": {
+   "thr15": {
+    "share_flagged_absolute": 0.3175953923686105,
+    "k_rank": 441,
+    "share_flagged_rank": 0.3174946004319654,
+    "absolute": {
+     "retention": 0.6629624517924235,
+     "kappa": 0.5062108860681761,
+     "chance_retention": 0.3174665139838092
+    },
+    "rank_matched": {
+     "retention": 0.6611791383219956,
+     "kappa": 0.5035631045667212,
+     "chance_retention": 0.3174946004319654
+    },
+    "kappa_absolute_minus_rank": {
+     "point": 0.002647781501454949,
+     "ci": [
+      -0.001965873029104822,
+      0.005014049410671571
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": 0.0017833134704279274,
+     "ci": [
+      -0.009115966590967015,
+      0.011183298955427058
+     ]
+    }
+   },
+   "thr20": {
+    "share_flagged_absolute": 0.231699064074874,
+    "k_rank": 322,
+    "share_flagged_rank": 0.23182145428365736,
+    "absolute": {
+     "retention": 0.6064677613422106,
+     "kappa": 0.4878777935923996,
+     "chance_retention": 0.23159050559756686
+    },
+    "rank_matched": {
+     "retention": 0.6049068322981366,
+     "kappa": 0.4856753421388115,
+     "chance_retention": 0.23182145428365736
+    },
+    "kappa_absolute_minus_rank": {
+     "point": 0.00220245145358805,
+     "ci": [
+      -0.004674887890934776,
+      0.0068385209771970445
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": 0.001560929044074011,
+     "ci": [
+      -0.01172663605821149,
+      0.012893627349691598
+     ]
+    }
+   },
+   "lcb_z": {
+    "share_flagged_absolute": 0.25132469402447805,
+    "k_rank": 349,
+    "share_flagged_rank": 0.25125989920806335,
+    "absolute": {
+     "retention": 0.6122787413349324,
+     "kappa": 0.482208954727076,
+     "chance_retention": 0.25122928349638535
+    },
+    "rank_matched": {
+     "retention": 0.620916905444126,
+     "kappa": 0.49370536698258766,
+     "chance_retention": 0.25125989920806335
+    },
+    "kappa_absolute_minus_rank": {
+     "point": -0.011496412255511679,
+     "ci": [
+      -0.020303857110882034,
+      -0.0008573514826464364
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": -0.008638164109193602,
+     "ci": [
+      -0.021715439273673105,
+      0.006867498708369354
+     ]
+    }
+   }
+  },
+  "guess_coding": {
+   "thr15_linear": {
+    "share_flagged": 0.3175953923686105,
+    "retention": 0.6629624517924235,
+    "kappa": 0.5062108860681761,
+    "chance_retention": 0.3174665139838092
+   },
+   "thr15_guess": {
+    "share_flagged": 0.41675305975521965,
+    "retention": 0.7154102833787596,
+    "kappa": 0.5122082073139567,
+    "chance_retention": 0.4166626714305251
+   },
+   "share_students_flag_differs_between_codings": 0.09915766738660907,
+   "mean_bias_linear": 0.08223353131749461,
+   "mean_bias_guess": 0.1319485466162707
+  },
+  "pool_sensitivity": {
+   "n_kept": 1288,
+   "thr15": {
+    "share_flagged": 0.3356288819875776,
+    "retention": 0.6610692861252245,
+    "kappa": 0.4899748608855164,
+    "chance_retention": 0.33548977409917485
+   },
+   "decile": {
+    "share_flagged": 0.1001552795031056,
+    "retention": 0.48806201550387596,
+    "kappa": 0.4310818601975771,
+    "chance_retention": 0.1001552795031056
+   },
+   "full_pool_thr15": {
+    "share_flagged": 0.3175953923686105,
+    "retention": 0.6629624517924235,
+    "kappa": 0.5062108860681761
+   }
+  },
+  "runtime_seconds": 13.7
+ },
+ "S2": {
+  "sample": "t34",
+  "N": 20,
+  "n_pool": 554,
+  "regression_vs_stream_D_max_abs_diff": 0.0,
+  "matched_prevalence": {
+   "thr15": {
+    "share_flagged_absolute": 0.4210830324909747,
+    "k_rank": 233,
+    "share_flagged_rank": 0.4205776173285197,
+    "absolute": {
+     "retention": 0.7125018041332726,
+     "kappa": 0.5035921266203074,
+     "chance_retention": 0.42081621505010475
+    },
+    "rank_matched": {
+     "retention": 0.7122746781115881,
+     "kappa": 0.5034273260866658,
+     "chance_retention": 0.4205776173285197
+    },
+    "kappa_absolute_minus_rank": {
+     "point": 0.00016480053364154035,
+     "ci": [
+      -0.005242067575993471,
+      0.006198361700408047
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": 0.00022712602168450946,
+     "ci": [
+      -0.014848510697292235,
+      0.015389486873313093
+     ]
+    }
+   },
+   "thr20": {
+    "share_flagged_absolute": 0.32568592057761736,
+    "k_rank": 180,
+    "share_flagged_rank": 0.3249097472924188,
+    "absolute": {
+     "retention": 0.6591707699364171,
+     "kappa": 0.49466454613713723,
+     "chance_retention": 0.32544945562737515
+    },
+    "rank_matched": {
+     "retention": 0.6586666666666667,
+     "kappa": 0.49438859180035644,
+     "chance_retention": 0.3249097472924188
+    },
+    "kappa_absolute_minus_rank": {
+     "point": 0.0002759543367807926,
+     "ci": [
+      -0.007420318855564434,
+      0.0067540954131034845
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": 0.0005041032697503667,
+     "ci": [
+      -0.01760808260574074,
+      0.016887068163828445
+     ]
+    }
+   },
+   "lcb_z": {
+    "share_flagged_absolute": 0.3302346570397113,
+    "k_rank": 183,
+    "share_flagged_rank": 0.33032490974729245,
+    "absolute": {
+     "retention": 0.6619919270208716,
+     "kappa": 0.49545901690066246,
+     "chance_retention": 0.3299615131102616
+    },
+    "rank_matched": {
+     "retention": 0.6615300546448085,
+     "kappa": 0.4945758767472347,
+     "chance_retention": 0.33032490974729245
+    },
+    "kappa_absolute_minus_rank": {
+     "point": 0.000883140153427775,
+     "ci": [
+      -0.010664720964807809,
+      0.012671101944681792
+     ]
+    },
+    "retention_absolute_minus_rank": {
+     "point": 0.0004618723760630994,
+     "ci": [
+      -0.01776059311664101,
+      0.018277248748016808
+     ]
+    }
+   }
+  },
+  "guess_coding": {
+   "thr15_linear": {
+    "share_flagged": 0.4210830324909747,
+    "retention": 0.7125018041332726,
+    "kappa": 0.5035921266203074,
+    "chance_retention": 0.42081621505010475
+   },
+   "thr15_guess": {
+    "share_flagged": 0.5588808664259928,
+    "retention": 0.765817400777228,
+    "kappa": 0.46932321493376017,
+    "chance_retention": 0.5586818059928604
+   },
+   "share_students_flag_differs_between_codings": 0.13779783393501804,
+   "mean_bias_linear": 0.12057152527075812,
+   "mean_bias_guess": 0.1843589237364621
+  },
+  "pool_sensitivity": {
+   "n_kept": 539,
+   "thr15": {
+    "share_flagged": 0.42910946196660477,
+    "retention": 0.7127482660758168,
+    "kappa": 0.4970532729270252,
+    "chance_retention": 0.428827280624707
+   },
+   "decile": {
+    "share_flagged": 0.10018552875695731,
+    "retention": 0.4681481481481481,
+    "kappa": 0.40893165330278686,
+    "chance_retention": 0.10018552875695731
+   },
+   "full_pool_thr15": {
+    "share_flagged": 0.4210830324909747,
+    "retention": 0.7125018041332726,
+    "kappa": 0.5035921266203074
+   }
+  },
+  "runtime_seconds": 5.9
+ }
+}

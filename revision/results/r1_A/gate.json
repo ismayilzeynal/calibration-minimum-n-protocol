@@ -1,0 +1,109 @@
+{
+ "tolerance": 1e-12,
+ "t12": {
+  "curves_vs_baseline": {
+   "rows_unmatched": 0,
+   "non_auroc_rows": 272,
+   "non_auroc_max_abs_diff": 0.0,
+   "non_auroc_nan_pattern_mismatches": 0,
+   "pass": true,
+   "auroc_rows": 34,
+   "auroc_r_changed_rows": 34,
+   "positive_control_rows": 34,
+   "positive_control_max_diff_pct_undefined": 0.0,
+   "positive_control_max_diff_pct_undefined_full": 0.0,
+   "positive_control_pass": true
+  },
+  "minN_vs_baseline": {
+   "numeric_fields": 97,
+   "skipped_auroc_fields": 26,
+   "max_abs_diff": 0.0,
+   "argmax": null,
+   "mismatches": [],
+   "n_mismatches": 0,
+   "pass": true
+  },
+  "cache_vs_baseline": {
+   "arrays_compared": 53,
+   "max_abs_diff": 0.0,
+   "nan_pattern_mismatches": 0,
+   "pass": true,
+   "positive_control_auroc_nan_equals_gamma_nan": {
+    "A20": true,
+    "B20": true,
+    "full20": true,
+    "A100": true,
+    "B100": true,
+    "full100": true
+   },
+   "positive_control_pass": true
+  },
+  "confound_vs_submitted": {
+   "numeric_fields": 78,
+   "skipped_auroc_fields": 14,
+   "max_abs_diff": 6.106226635438361e-16,
+   "argmax": "selection.student_level.d_accuracy",
+   "mismatches": [],
+   "n_mismatches": 0,
+   "pass": true
+  }
+ },
+ "t34": {
+  "curves_vs_baseline": {
+   "rows_unmatched": 0,
+   "non_auroc_rows": 272,
+   "non_auroc_max_abs_diff": 0.0,
+   "non_auroc_nan_pattern_mismatches": 0,
+   "pass": true,
+   "auroc_rows": 34,
+   "auroc_r_changed_rows": 34,
+   "positive_control_rows": 34,
+   "positive_control_max_diff_pct_undefined": 0.0,
+   "positive_control_max_diff_pct_undefined_full": 0.0,
+   "positive_control_pass": true
+  },
+  "minN_vs_baseline": {
+   "numeric_fields": 98,
+   "skipped_auroc_fields": 26,
+   "max_abs_diff": 0.0,
+   "argmax": null,
+   "mismatches": [],
+   "n_mismatches": 0,
+   "pass": true
+  },
+  "cache_vs_baseline": {
+   "arrays_compared": 53,
+   "max_abs_diff": 0.0,
+   "nan_pattern_mismatches": 0,
+   "pass": true,
+   "positive_control_auroc_nan_equals_gamma_nan": {
+    "A20": true,
+    "B20": true,
+    "full20": true,
+    "A100": true,
+    "B100": true,
+    "full100": true
+   },
+   "positive_control_pass": true
+  },
+  "confound_vs_submitted": {
+   "numeric_fields": 78,
+   "skipped_auroc_fields": 14,
+   "max_abs_diff": 0.0,
+   "argmax": null,
+   "mismatches": [],
+   "n_mismatches": 0,
+   "pass": true
+  }
+ },
+ "confirmatory_vs_submitted": {
+  "numeric_fields": 33,
+  "skipped_auroc_fields": 6,
+  "max_abs_diff": 0.0,
+  "argmax": null,
+  "mismatches": [],
+  "n_mismatches": 0,
+  "pass": true
+ },
+ "all_pass": true
+}

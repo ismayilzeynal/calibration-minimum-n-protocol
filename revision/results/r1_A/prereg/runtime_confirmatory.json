@@ -1,0 +1,7 @@
+{
+ "stage": "confirmatory",
+ "sample": null,
+ "wall_seconds": 0.03563213348388672,
+ "python": "3.12.10",
+ "numpy": "2.4.6"
+}

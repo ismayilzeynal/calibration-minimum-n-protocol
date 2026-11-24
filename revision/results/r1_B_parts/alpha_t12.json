@@ -1,0 +1,88 @@
+{
+ "sample": "t12",
+ "feasibility": {
+  "n_quizzes": 17227,
+  "quiz_user_pairs_with_duplicate_answers_share": 0.0,
+  "max_complete_students": 70,
+  "k_at_max": 5,
+  "n_quizzes_ge100": 0,
+  "n_quizzes_ge300": 0,
+  "top10": [
+   {
+    "QuizId": 10761,
+    "nstud": 70,
+    "k": 5
+   },
+   {
+    "QuizId": 2728,
+    "nstud": 67,
+    "k": 5
+   },
+   {
+    "QuizId": 17073,
+    "nstud": 60,
+    "k": 5
+   },
+   {
+    "QuizId": 11642,
+    "nstud": 59,
+    "k": 5
+   },
+   {
+    "QuizId": 16095,
+    "nstud": 58,
+    "k": 5
+   },
+   {
+    "QuizId": 13748,
+    "nstud": 57,
+    "k": 4
+   },
+   {
+    "QuizId": 1597,
+    "nstud": 54,
+    "k": 5
+   },
+   {
+    "QuizId": 9436,
+    "nstud": 51,
+    "k": 5
+   },
+   {
+    "QuizId": 15216,
+    "nstud": 45,
+    "k": 5
+   },
+   {
+    "QuizId": 9126,
+    "nstud": 45,
+    "k": 5
+   }
+  ]
+ },
+ "eligibility": {
+  "min_complete_students": 100,
+  "primary_min_students": 300,
+  "min_items": 4
+ },
+ "seeds": {
+  "per_student_splits": "default_rng([42, 103, 1, QuizId])",
+  "common_partitions": "default_rng([42, 104, 1, QuizId])",
+  "bootstrap": "default_rng([42, 105, 1, QuizId])"
+ },
+ "R_splits": 50,
+ "B": 1000,
+ "summary_primary_ge300": {
+  "bias": null,
+  "brier": null
+ },
+ "summary_all_ge100": {
+  "bias": null,
+  "brier": null
+ },
+ "quizzes": [],
+ "runtime_seconds": {
+  "total": 0.9883294105529785,
+  "quizzes": 0.9883294105529785
+ }
+}

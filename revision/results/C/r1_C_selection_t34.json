@@ -1,0 +1,525 @@
+{
+ "sample": "t34",
+ "dstrat_edges_p_loo": [
+  0.39544025157232704,
+  0.49120549120549123,
+  0.5812274368231047,
+  0.6794648051192553
+ ],
+ "descriptives": {
+  "n_answers": 1382727,
+  "n_students": 4918,
+  "n_questions": 948,
+  "n_quizzes": 120,
+  "n_groups": 370,
+  "n_tagged": 346428,
+  "share_answers_tagged": 0.2505396943865275,
+  "n_reporters": 4284,
+  "share_students_reporting": 0.8710858072387149,
+  "median_tagged_per_reporter": 31.0,
+  "mean_tagged_per_reporter": 80.8655462184874,
+  "reporters_with_ge": {
+   "5": 3693,
+   "10": 3230,
+   "20": 2617,
+   "50": 1685,
+   "100": 988,
+   "200": 554
+  },
+  "median_answers_per_student": 239.0,
+  "median_answers_per_reporter": 259.0,
+  "median_active_span_days": 126.0,
+  "accuracy_all": 0.5373316641679811,
+  "accuracy_tagged": 0.6220080363019156,
+  "accuracy_untagged": 0.5090249049743366,
+  "mean_confidence_tagged": 73.94761657714844,
+  "confidence_level_shares": {
+   "0": 0.08294075536619441,
+   "25": 0.05024131998568245,
+   "50": 0.15311406699227545,
+   "75": 0.25338021176117403,
+   "100": 0.4603236458946736
+  },
+  "first_answer": "2019-09-06 14:05:00",
+  "last_answer": "2020-05-01 08:33:00",
+  "first_tagged": "2019-09-06 14:39:00",
+  "last_tagged": "2020-04-29 10:11:00",
+  "tag_share_by_month": {
+   "2019-09": 0.5890649408614148,
+   "2019-10": 0.3985239852398524,
+   "2019-11": 0.2913512812332374,
+   "2019-12": 0.23699473583161806,
+   "2020-01": 0.19705472957979464,
+   "2020-02": 0.16087750262316758,
+   "2020-03": 0.15773448554679603,
+   "2020-04": 0.15860851271648072,
+   "2020-05": 0.0
+  },
+  "answers_by_month": {
+   "2019-09": 44810,
+   "2019-10": 177776,
+   "2019-11": 285233,
+   "2019-12": 223967,
+   "2020-01": 247855,
+   "2020-02": 164877,
+   "2020-03": 158304,
+   "2020-04": 79857,
+   "2020-05": 48
+  },
+  "item_p_question_level": {
+   "mean": 0.5070431947628486,
+   "q25": 0.3868327323894117,
+   "median": 0.49526546805427374,
+   "q75": 0.617563692143524
+  },
+  "answers_per_question_median": 1684.0,
+  "mean_item_p_all_answers": 0.5373316641679811,
+  "mean_item_p_tagged_answers": 0.5528060445066483,
+  "mean_item_p_loo_tagged_answers": 0.5527609379928827,
+  "mean_item_p_loo_untagged_answers": 0.5321737585127474,
+  "n_strand_categories": 3,
+  "n_topic_categories": 26,
+  "strand_share_all_answers": {
+   "Number": 0.4958975994538329,
+   "Geometry and Measure": 0.30103845516866307,
+   "Algebra": 0.20306394537750402
+  },
+  "strand_share_tagged_answers": {
+   "Number": 0.6027659427067096,
+   "Geometry and Measure": 0.23203955800339465,
+   "Algebra": 0.16519449928989574
+  },
+  "tag_coverage_by_strand": {
+   "Number": 0.30453221640651545,
+   "Geometry and Measure": 0.19311526135484583,
+   "Algebra": 0.20381648396264718
+  },
+  "demographics_all_students": {
+   "n_students": 4918,
+   "share_dob_known": 0.46543310288735257,
+   "median_birth_year": 2008.0,
+   "median_age_years_at_first_answer": 11.707049965776864,
+   "age_q25_q75": [
+    11.425051334702259,
+    11.967145790554415
+   ],
+   "share_premiumpupil_known": 0.4296461976413176,
+   "share_premiumpupil_1_among_known": 0.28442972077614764,
+   "gender_code_shares_raw": {
+    "0": 0.3810492069947133,
+    "1": 0.3098820658804392,
+    "2": 0.307645384302562,
+    "3": 0.0014233428222854819
+   }
+  },
+  "demographics_reporters": {
+   "n_students": 4284,
+   "share_dob_known": 0.44351073762838467,
+   "median_birth_year": 2008.0,
+   "median_age_years_at_first_answer": 11.66050650239562,
+   "age_q25_q75": [
+    11.397672826830938,
+    11.917864476386036
+   ],
+   "share_premiumpupil_known": 0.44397759103641454,
+   "share_premiumpupil_1_among_known": 0.2854889589905363,
+   "gender_code_shares_raw": {
+    "0": 0.4024276377217554,
+    "1": 0.30462184873949577,
+    "2": 0.29295051353874885
+   }
+  },
+  "student_metadata_note": "Gender is reported as raw codes; the code-to-label mapping is not verified here (unknown). DateOfBirth is month resolution."
+ },
+ "tagging_structure": {
+  "all_answers": {
+   "n_answers": 1382727,
+   "tag_share": 0.2505396943865275,
+   "eta2_student": 0.552969194966896,
+   "n_groups_student": 4918,
+   "eta2_quiz": 0.04401882403193803,
+   "n_groups_quiz": 120,
+   "eta2_question": 0.04124184512330834,
+   "n_groups_question": 948,
+   "eta2_student_x_quiz": 0.8334484837081872,
+   "n_groups_student_x_quiz": 101034,
+   "eta2_month": 0.05246007400169315,
+   "n_groups_month": 9,
+   "share_student_quiz_pairs_all_untagged": 0.6299265593760516,
+   "share_student_quiz_pairs_all_tagged": 0.1372409287962468,
+   "share_student_quiz_pairs_mixed": 0.23283251182770157,
+   "share_tagged_answers_in_mixed_pairs": 0.4851570889189096
+  },
+  "reporters_answers": {
+   "n_answers": 1278146,
+   "tag_share": 0.27103945871598395,
+   "eta2_student": 0.5403978339230677,
+   "n_groups_student": 4284,
+   "eta2_quiz": 0.048746884039624606,
+   "n_groups_quiz": 81,
+   "eta2_question": 0.045349394608630925,
+   "n_groups_question": 932,
+   "eta2_student_x_quiz": 0.8287647365924903,
+   "n_groups_student_x_quiz": 93382,
+   "eta2_month": 0.051896565796381106,
+   "n_groups_month": 9,
+   "share_student_quiz_pairs_all_untagged": 0.599601636289649,
+   "share_student_quiz_pairs_all_tagged": 0.14848686042277956,
+   "share_student_quiz_pairs_mixed": 0.2519115032875715,
+   "share_tagged_answers_in_mixed_pairs": 0.4851570889189096
+  }
+ },
+ "paired_all_untagged": {
+  "basis": "all untagged answers",
+  "n_students": 3539,
+  "n_answers": 1089956,
+  "n_tagged": 319983,
+  "acc_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": 0.07757482315977612,
+   "median": 0.0733873593574762,
+   "sd": 0.16250081031466818,
+   "q25": -0.015836609873307123,
+   "q75": 0.18175608544461003,
+   "share_positive": 0.6928510878779316,
+   "mean_ci95": [
+    0.07244555732297864,
+    0.08313122123361441
+   ]
+  },
+  "acc_mean_tagged": 0.599827263440252,
+  "acc_mean_untagged": 0.5222524402804758,
+  "p_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": 0.03578829977923779,
+   "median": 0.03951943640899247,
+   "sd": 0.05615162141250812,
+   "q25": 0.002064921491143734,
+   "q75": 0.07127862770631935,
+   "share_positive": 0.7629273806159932,
+   "mean_ci95": [
+    0.03393644008663791,
+    0.03764392633255216
+   ]
+  },
+  "p_mean_tagged": 0.5697404261653723,
+  "p_mean_untagged": 0.5339521263861345,
+  "pall_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": 0.035809904568414895,
+   "median": 0.039546789310151875,
+   "sd": 0.05615800797954533,
+   "q25": 0.0021489502875179922,
+   "q75": 0.07126690836076183,
+   "share_positive": 0.7632099463125177,
+   "mean_ci95": [
+    0.03394080241471177,
+    0.03761309655737826
+   ]
+  },
+  "pall_mean_tagged": 0.5697593697445599,
+  "pall_mean_untagged": 0.533949465176145,
+  "rel_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": 0.041786523380538336,
+   "median": 0.0395937076520122,
+   "sd": 0.14771150296927263,
+   "q25": -0.04875390372947487,
+   "q75": 0.1336107970953832,
+   "share_positive": 0.6162757841198079,
+   "mean_ci95": [
+    0.03695698442018886,
+    0.04662599200665684
+   ]
+  },
+  "rel_mean_tagged": 0.03008683727487958,
+  "rel_mean_untagged": -0.011699686105658764,
+  "days_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": -38.43666837935497,
+   "median": -37.967609695682945,
+   "sd": 39.2413883427645,
+   "q25": -68.18415279487414,
+   "q75": -10.73635333902913,
+   "share_positive": 0.15060751624752755,
+   "mean_ci95": [
+    -39.726573424654646,
+    -37.10761691806699
+   ]
+  },
+  "days_mean_tagged": 32.45734429760043,
+  "days_mean_untagged": 70.8940126769554,
+  "wkend_tagged_minus_untagged": {
+   "n": 3539,
+   "mean": 0.01279638460163113,
+   "median": 0.0,
+   "sd": 0.24923236991878167,
+   "q25": -0.09198001187413417,
+   "q75": 0.10200529106851927,
+   "share_positive": 0.36168409155128567,
+   "mean_ci95": [
+    0.004368771591897431,
+    0.021021113767924288
+   ]
+  },
+  "wkend_mean_tagged": 0.20814527485000803,
+  "wkend_mean_untagged": 0.19534889024837687,
+  "tvd_strand": {
+   "n": 3539,
+   "mean": 0.34268785317441525,
+   "median": 0.32608695652173914,
+   "sd": 0.1944155712803316,
+   "q25": 0.19632047380411083,
+   "q75": 0.47637960944344115,
+   "share_positive": 0.9790901384571913,
+   "mean_ci95": [
+    0.3362160554731489,
+    0.3486260363008841
+   ]
+  },
+  "tvd_strand_permutation_baseline": {
+   "n": 3539,
+   "mean": 0.10964234092615667,
+   "median": 0.08654471167239303,
+   "sd": 0.08691330584045837,
+   "q25": 0.048840880678166686,
+   "q75": 0.1454266592303402,
+   "share_positive": 0.978242441367618
+  },
+  "tvd_strand_minus_baseline_mean": 0.2330455122482586,
+  "tvd_topic": {
+   "n": 3539,
+   "mean": 0.5886805585085536,
+   "median": 0.6022727272727273,
+   "sd": 0.18177972050222327,
+   "q25": 0.46039128829826503,
+   "q75": 0.7262709137709137,
+   "share_positive": 0.9997174343034756,
+   "mean_ci95": [
+    0.5823986710885374,
+    0.5948110310849205
+   ]
+  },
+  "tvd_topic_permutation_baseline": {
+   "n": 3539,
+   "mean": 0.2723946081166155,
+   "median": 0.24041055718475074,
+   "sd": 0.13702378757988995,
+   "q25": 0.17078603084021374,
+   "q75": 0.34816845667861296,
+   "share_positive": 0.9997174343034756
+  },
+  "tvd_topic_minus_baseline_mean": 0.31628595039193813,
+  "strand_share_diff_mean": {
+   "Number": 0.1887483705279495,
+   "Geometry and Measure": -0.09295708123874208,
+   "Algebra": -0.09579128928920738
+  },
+  "strand_share_tagged_mean": {
+   "Number": 0.6688145983442879,
+   "Geometry and Measure": 0.21311002678326849,
+   "Algebra": 0.11807537487244356
+  },
+  "strand_share_untagged_mean": {
+   "Number": 0.4800662278163384,
+   "Geometry and Measure": 0.3060671080220106,
+   "Algebra": 0.21386666416165095
+  },
+  "eligibility": ">= 5 tagged and >= 5 untagged answers"
+ },
+ "paired_same_quiz": {
+  "basis": "untagged answers in the same quiz attempts",
+  "n_students": 3315,
+  "n_answers": 317604,
+  "n_tagged": 161094,
+  "acc_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": 0.048211623960303616,
+   "median": 0.045454545454545414,
+   "sd": 0.1707235436864455,
+   "q25": -0.04981556002682758,
+   "q75": 0.15437254901960784,
+   "share_positive": 0.608446455505279,
+   "mean_ci95": [
+    0.04214516202318636,
+    0.05366608136551354
+   ]
+  },
+  "acc_mean_tagged": 0.5947435665015872,
+  "acc_mean_untagged": 0.5465319425412837,
+  "p_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": 0.025078492156603183,
+   "median": 0.027055758696453158,
+   "sd": 0.059003664343308566,
+   "q25": -0.01222517034935322,
+   "q75": 0.06362904297045996,
+   "share_positive": 0.6748114630467572,
+   "mean_ci95": [
+    0.023178889948775715,
+    0.027071534418968233
+   ]
+  },
+  "p_mean_tagged": 0.5695020729175189,
+  "p_mean_untagged": 0.5444235807609156,
+  "pall_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": 0.02508867674261201,
+   "median": 0.02705084918618711,
+   "sd": 0.05901049535512355,
+   "q25": -0.01216514290092402,
+   "q75": 0.06359280241060034,
+   "share_positive": 0.6751131221719457,
+   "mean_ci95": [
+    0.0229410748925677,
+    0.027024349391892792
+   ]
+  },
+  "pall_mean_tagged": 0.5695170726539508,
+  "pall_mean_untagged": 0.5444283959113388,
+  "rel_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": 0.023133131803700416,
+   "median": 0.024811416421887583,
+   "sd": 0.15466315461165334,
+   "q25": -0.07087614888609953,
+   "q75": 0.11828705800046391,
+   "share_positive": 0.5653092006033182,
+   "mean_ci95": [
+    0.017871552081141894,
+    0.028195100184083815
+   ]
+  },
+  "rel_mean_tagged": 0.025241493584068426,
+  "rel_mean_untagged": 0.002108361780368005,
+  "days_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": -15.204519012413481,
+   "median": -9.954841579861096,
+   "sd": 24.031958176916447,
+   "q25": -26.27000292171202,
+   "q75": -0.05433871310084108,
+   "share_positive": 0.20482654600301659,
+   "mean_ci95": [
+    -15.979063685113749,
+    -14.347460614606641
+   ]
+  },
+  "days_mean_tagged": 34.08273760712989,
+  "days_mean_untagged": 49.28725661954337,
+  "wkend_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": 0.004756691961319635,
+   "median": 0.0,
+   "sd": 0.19203591848502238,
+   "q25": -0.008479755947647771,
+   "q75": 0.030273723790708043,
+   "share_positive": 0.2874811463046757,
+   "mean_ci95": [
+    -0.00125670449778418,
+    0.01084178557609253
+   ]
+  },
+  "wkend_mean_tagged": 0.20661103480346593,
+  "wkend_mean_untagged": 0.20185434284214632,
+  "relpos_tagged_minus_untagged": {
+   "n": 3315,
+   "mean": -0.11038390186201542,
+   "median": -0.10104575163398694,
+   "sd": 0.14345087964425357,
+   "q25": -0.19105489417989416,
+   "q75": -0.02321021571021578,
+   "share_positive": 0.19879336349924584,
+   "mean_ci95": [
+    -0.11529708990961875,
+    -0.10561630057254084
+   ]
+  },
+  "relpos_mean_tagged": 0.43274169171689925,
+  "relpos_mean_untagged": 0.5431255935789147,
+  "tvd_strand": {
+   "n": 3315,
+   "mean": 0.19924578996218859,
+   "median": 0.1624758220502901,
+   "sd": 0.18167592188043247,
+   "q25": 0.05091750841750842,
+   "q75": 0.30000000000000004,
+   "share_positive": 0.8298642533936652,
+   "mean_ci95": [
+    0.19322920108621264,
+    0.2053041194490761
+   ]
+  },
+  "tvd_strand_permutation_baseline": {
+   "n": 3315,
+   "mean": 0.09265425173836907,
+   "median": 0.07142857142857141,
+   "sd": 0.0909942651763185,
+   "q25": 0.023376623376623374,
+   "q75": 0.13537300468110638,
+   "share_positive": 0.8265460030165912
+  },
+  "tvd_strand_minus_baseline_mean": 0.10659153822381952,
+  "tvd_topic": {
+   "n": 3315,
+   "mean": 0.3816115569935873,
+   "median": 0.3733974358974359,
+   "sd": 0.17874026184018688,
+   "q25": 0.2581008172647171,
+   "q75": 0.49797684612790827,
+   "share_positive": 0.9767722473604826,
+   "mean_ci95": [
+    0.37602150676882934,
+    0.3877835941669957
+   ]
+  },
+  "tvd_topic_permutation_baseline": {
+   "n": 3315,
+   "mean": 0.2234084765328764,
+   "median": 0.20681818181818185,
+   "sd": 0.12069975574812554,
+   "q25": 0.14428777352145744,
+   "q75": 0.2857142857142857,
+   "share_positive": 0.9749622926093514
+  },
+  "tvd_topic_minus_baseline_mean": 0.15820308046071088,
+  "strand_share_diff_mean": {
+   "Number": 0.0511825285526083,
+   "Geometry and Measure": -0.006564255930906069,
+   "Algebra": -0.04461827262170223
+  },
+  "strand_share_tagged_mean": {
+   "Number": 0.668843373186435,
+   "Geometry and Measure": 0.20823803466836213,
+   "Algebra": 0.12291859214520291
+  },
+  "strand_share_untagged_mean": {
+   "Number": 0.6176608446338265,
+   "Geometry and Measure": 0.21480229059926814,
+   "Algebra": 0.16753686476690516
+  },
+  "eligibility": ">= 5 tagged and >= 5 untagged answers within student x quiz pairs that mix tagged and untagged",
+  "relpos_note": "relative position within the student x quiz pair, 0 = first answer, 1 = last; order by DateAnswered (minute resolution), ties in original file order"
+ },
+ "designA_pool_difficulty": {
+  "n_students": 554,
+  "n_with_ge5_untagged": 503,
+  "p_loo_tagged_minus_untagged": {
+   "n": 551,
+   "mean": 0.013835629496965188,
+   "median": 0.02144518618845781,
+   "sd": 0.05815658239037558,
+   "q25": -0.021507069802369716,
+   "q75": 0.0511764379723012,
+   "share_positive": 0.662431941923775,
+   "mean_ci95": [
+    0.009481821353280013,
+    0.0189158849909343
+   ]
+  }
+ },
+ "runtime_seconds": {
+  "load": 0.6418261528015137,
+  "total": 4.445206642150879
+ }
+}

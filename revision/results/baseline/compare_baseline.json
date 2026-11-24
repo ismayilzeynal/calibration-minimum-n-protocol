@@ -1,0 +1,97 @@
+{
+ "minN_t12.json": {
+  "numeric_fields": 114,
+  "max_abs_diff": 0.0,
+  "argmax_field": null,
+  "nonnumeric_or_special_mismatches": [],
+  "n_nonnumeric_or_special_mismatches": 0
+ },
+ "reliability_curves_t12.csv": {
+  "rows_orig": 306,
+  "rows_new": 306,
+  "rows_unmatched": 0,
+  "fields": {
+   "n_pool": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "r": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 2.9976021664879227e-15,
+    "argmax_row": {
+     "sample": "t12",
+     "design": "B",
+     "split": "temporal",
+     "index": "auroc",
+     "N": 50
+    }
+   },
+   "ci_lo": {
+    "compared": 112,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "ci_hi": {
+    "compared": 112,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "pct_undefined": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "pct_undefined_full": {
+    "compared": 198,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   }
+  }
+ },
+ "minN_t34.json": {
+  "numeric_fields": 113,
+  "max_abs_diff": 0.0,
+  "argmax_field": null,
+  "nonnumeric_or_special_mismatches": [],
+  "n_nonnumeric_or_special_mismatches": 0
+ },
+ "reliability_curves_t34.csv": {
+  "rows_orig": 306,
+  "rows_new": 306,
+  "rows_unmatched": 0,
+  "fields": {
+   "n_pool": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "r": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "ci_lo": {
+    "compared": 112,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "ci_hi": {
+    "compared": 112,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "pct_undefined": {
+    "compared": 306,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   },
+   "pct_undefined_full": {
+    "compared": 198,
+    "nan_pattern_mismatches": 0,
+    "max_abs_diff": 0.0
+   }
+  }
+ }
+}

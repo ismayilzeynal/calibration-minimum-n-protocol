@@ -1,0 +1,583 @@
+{
+ "sample": "t12",
+ "dstrat_edges_p_loo": [
+  0.5048322910744741,
+  0.6042780748663101,
+  0.6935749588138386,
+  0.7827868852459017
+ ],
+ "descriptives": {
+  "n_answers": 15867850,
+  "n_students": 118971,
+  "n_questions": 27613,
+  "n_quizzes": 17227,
+  "n_groups": 11838,
+  "n_tagged": 1506052,
+  "share_answers_tagged": 0.09491216516415267,
+  "n_reporters": 39842,
+  "share_students_reporting": 0.33488833413184727,
+  "median_tagged_per_reporter": 15.0,
+  "mean_tagged_per_reporter": 37.80061241905527,
+  "reporters_with_ge": {
+   "5": 29889,
+   "10": 23825,
+   "20": 17156,
+   "50": 8387,
+   "100": 3738,
+   "200": 1389
+  },
+  "median_answers_per_student": 88.0,
+  "median_answers_per_reporter": 121.0,
+  "median_active_span_days": 135.0,
+  "accuracy_all": 0.6429503051768198,
+  "accuracy_tagged": 0.6762409266081119,
+  "accuracy_untagged": 0.6394592794022029,
+  "mean_confidence_tagged": 74.99256896972656,
+  "confidence_level_shares": {
+   "0": 0.07790634055132227,
+   "25": 0.050197469941276926,
+   "50": 0.1548346272240268,
+   "75": 0.22841044001136748,
+   "100": 0.4886511222720065
+  },
+  "first_answer": "2018-09-01 00:53:00",
+  "last_answer": "2020-05-02 11:14:00",
+  "first_tagged": "2019-01-24 15:38:00",
+  "last_tagged": "2020-04-29 10:17:00",
+  "tag_share_by_month": {
+   "2018-09": 0.0,
+   "2018-10": 0.0,
+   "2018-11": 0.0,
+   "2018-12": 0.0,
+   "2019-01": 0.01712406441369925,
+   "2019-02": 0.14324116303773957,
+   "2019-03": 0.11796430767287676,
+   "2019-04": 0.10041562078134278,
+   "2019-05": 0.08868559876724819,
+   "2019-06": 0.08613333869476054,
+   "2019-07": 0.0868641124141479,
+   "2019-08": 0.08200196326699008,
+   "2019-09": 0.1556069154973598,
+   "2019-10": 0.1656500796512511,
+   "2019-11": 0.15712786255487138,
+   "2019-12": 0.13689593918876053,
+   "2020-01": 0.11149878822396563,
+   "2020-02": 0.11211677647492096,
+   "2020-03": 0.10531787517722678,
+   "2020-04": 0.12528527720473187,
+   "2020-05": 0.0
+  },
+  "answers_by_month": {
+   "2018-09": 441758,
+   "2018-10": 893520,
+   "2018-11": 1035047,
+   "2018-12": 619775,
+   "2019-01": 872982,
+   "2019-02": 786045,
+   "2019-03": 1140133,
+   "2019-04": 658533,
+   "2019-05": 686594,
+   "2019-06": 497380,
+   "2019-07": 266301,
+   "2019-08": 70291,
+   "2019-09": 729492,
+   "2019-10": 1060247,
+   "2019-11": 1176615,
+   "2019-12": 693556,
+   "2020-01": 1169358,
+   "2020-02": 961221,
+   "2020-03": 1306236,
+   "2020-04": 802728,
+   "2020-05": 38
+  },
+  "item_p_question_level": {
+   "mean": 0.6720408057050914,
+   "q25": 0.557556773688332,
+   "median": 0.6847826086956522,
+   "q75": 0.7970149253731343
+  },
+  "answers_per_question_median": 281.0,
+  "mean_item_p_all_answers": 0.6429503051768198,
+  "mean_item_p_tagged_answers": 0.6460885235981497,
+  "mean_item_p_loo_tagged_answers": 0.6460477996580222,
+  "mean_item_p_loo_untagged_answers": 0.642625485975324,
+  "n_strand_categories": 29,
+  "n_topic_categories": 354,
+  "strand_share_all_answers": {
+   "Number": 0.46469792694032275,
+   "Algebra": 0.21789001030385338,
+   "Geometry and Measure": 0.21411312811754585,
+   "Data and Statistics": 0.08603093676837127,
+   "Number+Algebra": 0.004760695368307616,
+   "Advanced Pure": 0.0038393355117422967,
+   "Number+Geometry and Measure": 0.00328834719259383,
+   "Algebra+Geometry and Measure": 0.0030770394224800463
+  },
+  "strand_share_tagged_answers": {
+   "Number": 0.5383067782520126,
+   "Algebra": 0.1974274460642793,
+   "Geometry and Measure": 0.1845972117828601,
+   "Data and Statistics": 0.06849564291272811,
+   "Number+Algebra": 0.0028737387553683406,
+   "Advanced Pure": 0.0027236775357026184,
+   "Number+Geometry and Measure": 0.002460074419741151,
+   "Algebra+Geometry and Measure": 0.0020271544408825195
+  },
+  "tag_coverage_by_strand": {
+   "Number": 0.10994639503308828,
+   "Algebra": 0.0859987401104746,
+   "Geometry and Measure": 0.08182833629873598,
+   "Data and Statistics": 0.07556665099045802,
+   "Number+Algebra": 0.057292631913372694,
+   "Advanced Pure": 0.06733199829289911,
+   "Number+Geometry and Measure": 0.07100557695624676,
+   "Algebra+Geometry and Measure": 0.06252816122557654
+  },
+  "demographics_all_students": {
+   "n_students": 118971,
+   "share_dob_known": 0.6771902396382312,
+   "median_birth_year": 2005.0,
+   "median_age_years_at_first_answer": 13.431895961670088,
+   "age_q25_q75": [
+    11.863107460643395,
+    14.767967145790555
+   ],
+   "share_premiumpupil_known": 0.2890284186902691,
+   "share_premiumpupil_1_among_known": 0.25798290001744895,
+   "gender_code_shares_raw": {
+    "0": 0.23535987761723445,
+    "1": 0.3943061754545225,
+    "2": 0.3701658387338091,
+    "3": 0.00016810819443393768
+   }
+  },
+  "demographics_reporters": {
+   "n_students": 39842,
+   "share_dob_known": 0.5223884343155464,
+   "median_birth_year": 2005.0,
+   "median_age_years_at_first_answer": 13.442847364818617,
+   "age_q25_q75": [
+    11.85763175906913,
+    14.688569472963723
+   ],
+   "share_premiumpupil_known": 0.45753225239696804,
+   "share_premiumpupil_1_among_known": 0.26018980744966813,
+   "gender_code_shares_raw": {
+    "0": 0.31511972290547663,
+    "1": 0.34787410270568747,
+    "2": 0.3369057778223985,
+    "3": 0.00010039656643742784
+   }
+  },
+  "student_metadata_note": "Gender is reported as raw codes; the code-to-label mapping is not verified here (unknown). DateOfBirth is month resolution."
+ },
+ "tagging_structure": {
+  "all_answers": {
+   "n_answers": 15867850,
+   "tag_share": 0.09491216516415267,
+   "eta2_student": 0.5701003227945775,
+   "n_groups_student": 118971,
+   "eta2_quiz": 0.05790441908991166,
+   "n_groups_quiz": 17227,
+   "eta2_question": 0.03546922603920109,
+   "n_groups_question": 27613,
+   "eta2_student_x_quiz": 0.8623859075340762,
+   "n_groups_student_x_quiz": 1994919,
+   "eta2_month": 0.036704315683801884,
+   "n_groups_month": 21,
+   "share_student_quiz_pairs_all_untagged": 0.8659945591775907,
+   "share_student_quiz_pairs_all_tagged": 0.06491842525937143,
+   "share_student_quiz_pairs_mixed": 0.0690870155630379,
+   "share_tagged_answers_in_mixed_pairs": 0.3887415573964246
+  },
+  "reporters_answers": {
+   "n_answers": 6856349,
+   "tag_share": 0.21965801332458426,
+   "eta2_student": 0.5013763520578948,
+   "n_groups_student": 39842,
+   "eta2_quiz": 0.06487682266158146,
+   "n_groups_quiz": 7049,
+   "eta2_question": 0.051061424618027755,
+   "n_groups_question": 26379,
+   "eta2_student_x_quiz": 0.8403868520217267,
+   "n_groups_student_x_quiz": 876984,
+   "eta2_month": 0.06889942632811792,
+   "n_groups_month": 21,
+   "share_student_quiz_pairs_all_untagged": 0.6951711775813469,
+   "share_student_quiz_pairs_all_tagged": 0.14767316165403246,
+   "share_student_quiz_pairs_mixed": 0.15715566076462056,
+   "share_tagged_answers_in_mixed_pairs": 0.3887415573964246
+  }
+ },
+ "paired_all_untagged": {
+  "basis": "all untagged answers",
+  "n_students": 27625,
+  "n_answers": 4987770,
+  "n_tagged": 1293992,
+  "acc_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": 0.0397352149374307,
+   "median": 0.03703703703703698,
+   "sd": 0.18138625352799684,
+   "q25": -0.0671186440677966,
+   "q75": 0.150197628458498,
+   "share_positive": 0.5896470588235294,
+   "mean_ci95": [
+    0.037692431039751645,
+    0.041841909415423054
+   ]
+  },
+  "acc_mean_tagged": 0.6346220509030714,
+  "acc_mean_untagged": 0.5948868359656408,
+  "p_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": 0.011775484899145766,
+   "median": 0.01214738948886851,
+   "sd": 0.05939010234535035,
+   "q25": -0.024060272149026285,
+   "q75": 0.04714111251243214,
+   "share_positive": 0.5909502262443439,
+   "mean_ci95": [
+    0.011057338580712093,
+    0.01244325797944266
+   ]
+  },
+  "p_mean_tagged": 0.6425551153608263,
+  "p_mean_untagged": 0.6307796304616806,
+  "pall_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": 0.011809516080953356,
+   "median": 0.012219556306713675,
+   "sd": 0.05939543009225727,
+   "q25": -0.024038321377311878,
+   "q75": 0.0471861962454877,
+   "share_positive": 0.5913484162895928,
+   "mean_ci95": [
+    0.011108525523402258,
+    0.012481698077746989
+   ]
+  },
+  "pall_mean_tagged": 0.6425443280474378,
+  "pall_mean_untagged": 0.6307348119664845,
+  "rel_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": 0.027959730038284933,
+   "median": 0.02604643383515824,
+   "sd": 0.16636372605412467,
+   "q25": -0.07193664776971187,
+   "q75": 0.1297705874388736,
+   "share_positive": 0.5710045248868778,
+   "mean_ci95": [
+    0.02603679535910682,
+    0.02995579590176145
+   ]
+  },
+  "rel_mean_tagged": -0.0079330644577548,
+  "rel_mean_untagged": -0.03589279449603972,
+  "days_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": -2.575120204484422,
+   "median": -10.082020703530635,
+   "sd": 80.96869487174335,
+   "q25": -49.669637370489454,
+   "q75": 34.49912436474936,
+   "share_positive": 0.40271493212669685,
+   "mean_ci95": [
+    -3.443507563860141,
+    -1.67133989073599
+   ]
+  },
+  "days_mean_tagged": 88.43334678184188,
+  "days_mean_untagged": 91.00846698632631,
+  "wkend_tagged_minus_untagged": {
+   "n": 27625,
+   "mean": -0.0027242226875628067,
+   "median": 0.0,
+   "sd": 0.23603394298811448,
+   "q25": -0.07954545454545454,
+   "q75": 0.005471956224350205,
+   "share_positive": 0.25310407239819005,
+   "mean_ci95": [
+    -0.0053533704027810955,
+    3.364536823828397e-05
+   ]
+  },
+  "wkend_mean_tagged": 0.1601725630489148,
+  "wkend_mean_untagged": 0.16289678573647762,
+  "tvd_strand": {
+   "n": 27625,
+   "mean": 0.33679841636543917,
+   "median": 0.303030303030303,
+   "sd": 0.22160535146151764,
+   "q25": 0.16275510204081634,
+   "q75": 0.4790874524714829,
+   "share_positive": 0.9669140271493213,
+   "mean_ci95": [
+    0.3342665387425099,
+    0.3393337026822506
+   ]
+  },
+  "tvd_strand_permutation_baseline": {
+   "n": 27625,
+   "mean": 0.15058882869786103,
+   "median": 0.1286646884272997,
+   "sd": 0.1085144240124384,
+   "q25": 0.07017543859649125,
+   "q75": 0.20875420875420878,
+   "share_positive": 0.9663348416289593
+  },
+  "tvd_strand_minus_baseline_mean": 0.18620958766757814,
+  "tvd_topic": {
+   "n": 27625,
+   "mean": 0.6585940526911864,
+   "median": 0.6872489959839359,
+   "sd": 0.20546499498666457,
+   "q25": 0.5210084033613444,
+   "q75": 0.817164179104478,
+   "share_positive": 0.9981176470588236,
+   "mean_ci95": [
+    0.6562162502575164,
+    0.6609635501344674
+   ]
+  },
+  "tvd_topic_permutation_baseline": {
+   "n": 27625,
+   "mean": 0.3909044101225468,
+   "median": 0.3613899613899614,
+   "sd": 0.19307160081867128,
+   "q25": 0.23999999999999996,
+   "q75": 0.5214785214785213,
+   "share_positive": 0.9980452488687783
+  },
+  "tvd_topic_minus_baseline_mean": 0.26768964256863964,
+  "strand_share_diff_mean": {
+   "Number": 0.007487268360888574,
+   "Algebra": -0.0008600077040172273,
+   "Geometry and Measure": -0.006940643788200737,
+   "Data and Statistics": 0.0010922296404688306,
+   "Number+Algebra": -6.87350644257487e-05,
+   "Number+Geometry and Measure": -5.011964539178743e-05
+  },
+  "strand_share_tagged_mean": {
+   "Number": 0.4999431563679934,
+   "Algebra": 0.2140841549276396,
+   "Geometry and Measure": 0.19486153050190813,
+   "Data and Statistics": 0.07801180624592681,
+   "Number+Algebra": 0.003689304718385658,
+   "Number+Geometry and Measure": 0.0028850912270014816
+  },
+  "strand_share_untagged_mean": {
+   "Number": 0.4924558880071048,
+   "Algebra": 0.21494416263165686,
+   "Geometry and Measure": 0.20180217429010888,
+   "Data and Statistics": 0.07691957660545795,
+   "Number+Algebra": 0.0037580397828114068,
+   "Number+Geometry and Measure": 0.0029352108723932693
+  },
+  "eligibility": ">= 5 tagged and >= 5 untagged answers"
+ },
+ "paired_same_quiz": {
+  "basis": "untagged answers in the same quiz attempts",
+  "n_students": 20748,
+  "n_answers": 1010460,
+  "n_tagged": 497928,
+  "acc_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": 0.040938502324915735,
+   "median": 0.033333333333333326,
+   "sd": 0.20127662002105676,
+   "q25": -0.07739547038327532,
+   "q75": 0.16666666666666663,
+   "share_positive": 0.5617408906882592,
+   "mean_ci95": [
+    0.03830872315560864,
+    0.043578900609588134
+   ]
+  },
+  "acc_mean_tagged": 0.6275520242837618,
+  "acc_mean_untagged": 0.5866135219588461,
+  "p_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": 0.020243331143462787,
+   "median": 0.019854681126746543,
+   "sd": 0.0660108711108359,
+   "q25": -0.02120142952535259,
+   "q75": 0.06107881248479316,
+   "share_positive": 0.6284461152882206,
+   "mean_ci95": [
+    0.01930201668042078,
+    0.021124792206245798
+   ]
+  },
+  "p_mean_tagged": 0.6426258285067606,
+  "p_mean_untagged": 0.6223824973632979,
+  "pall_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": 0.02027025811259527,
+   "median": 0.019896613738250857,
+   "sd": 0.06602591414913205,
+   "q25": -0.021138945658761676,
+   "q75": 0.06110294572775701,
+   "share_positive": 0.6287352997879314,
+   "mean_ci95": [
+    0.019417341033459632,
+    0.021189449702495283
+   ]
+  },
+  "pall_mean_tagged": 0.6426075528939088,
+  "pall_mean_untagged": 0.6223372947813135,
+  "rel_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": 0.020695171181452945,
+   "median": 0.01846594686277553,
+   "sd": 0.1832129261852251,
+   "q25": -0.09073230381728943,
+   "q75": 0.13541040773581203,
+   "share_positive": 0.5438114517061885,
+   "mean_ci95": [
+    0.018360048303102935,
+    0.02309704289027639
+   ]
+  },
+  "rel_mean_tagged": -0.01507380422299882,
+  "rel_mean_untagged": -0.035768975404451765,
+  "days_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": -9.327267012560453,
+   "median": -4.001405078813908,
+   "sd": 33.37483418879395,
+   "q25": -18.66224449988329,
+   "q75": 1.0928478422619037,
+   "share_positive": 0.2979564295353769,
+   "mean_ci95": [
+    -9.763714440913397,
+    -8.903522914093337
+   ]
+  },
+  "days_mean_tagged": 90.9617704442122,
+  "days_mean_untagged": 100.28903745677266,
+  "wkend_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": 0.0017583668278733885,
+   "median": 0.0,
+   "sd": 0.1598352266668694,
+   "q25": 0.0,
+   "q75": 0.0,
+   "share_positive": 0.20334490071332176,
+   "mean_ci95": [
+    -0.0004686123461234719,
+    0.004002123828066311
+   ]
+  },
+  "wkend_mean_tagged": 0.16112987042929094,
+  "wkend_mean_untagged": 0.15937150360141755,
+  "relpos_tagged_minus_untagged": {
+   "n": 20748,
+   "mean": -0.12202491038313139,
+   "median": -0.12068828476713528,
+   "sd": 0.17581139103995372,
+   "q25": -0.23483064723473931,
+   "q75": -0.01178168635875404,
+   "share_positive": 0.22378060535955271,
+   "mean_ci95": [
+    -0.12449781296357969,
+    -0.11971047963384995
+   ]
+  },
+  "relpos_mean_tagged": 0.4306764588189108,
+  "relpos_mean_untagged": 0.5527013692020423,
+  "tvd_strand": {
+   "n": 20748,
+   "mean": 0.2118100800142981,
+   "median": 0.17834212571054675,
+   "sd": 0.18097910774771983,
+   "q25": 0.06285613397901535,
+   "q75": 0.32307692307692304,
+   "share_positive": 0.8442259494891073,
+   "mean_ci95": [
+    0.20936980807213326,
+    0.21411376924796324
+   ]
+  },
+  "tvd_strand_permutation_baseline": {
+   "n": 20748,
+   "mean": 0.14961329354600725,
+   "median": 0.125,
+   "sd": 0.1312886412351113,
+   "q25": 0.04545454545454544,
+   "q75": 0.22222222222222227,
+   "share_positive": 0.8406593406593407
+  },
+  "tvd_strand_minus_baseline_mean": 0.062196786468290854,
+  "tvd_topic": {
+   "n": 20748,
+   "mean": 0.44679353706927183,
+   "median": 0.4363636363636364,
+   "sd": 0.22176441255218904,
+   "q25": 0.28750000000000003,
+   "q75": 0.6,
+   "share_positive": 0.9755157123578176,
+   "mean_ci95": [
+    0.44373629043336277,
+    0.4496773208609408
+   ]
+  },
+  "tvd_topic_permutation_baseline": {
+   "n": 20748,
+   "mean": 0.35301974626197324,
+   "median": 0.31596320346320345,
+   "sd": 0.21447896730066526,
+   "q25": 0.19999999999999998,
+   "q75": 0.4666666666666666,
+   "share_positive": 0.9739251976094081
+  },
+  "tvd_topic_minus_baseline_mean": 0.09377379080729858,
+  "strand_share_diff_mean": {
+   "Number": 0.0177011943124723,
+   "Algebra": -0.005625394976518652,
+   "Geometry and Measure": -0.011178794572553698,
+   "Data and Statistics": -0.00015205650811795577,
+   "Number+Algebra": 0.0003983612139236821,
+   "Number+Geometry and Measure": -0.00039984033629572233
+  },
+  "strand_share_tagged_mean": {
+   "Number": 0.5171468788673559,
+   "Algebra": 0.2066365498587306,
+   "Geometry and Measure": 0.18845568608967112,
+   "Data and Statistics": 0.07546219666800666,
+   "Number+Algebra": 0.003544241879541756,
+   "Number+Geometry and Measure": 0.0027885866382779496
+  },
+  "strand_share_untagged_mean": {
+   "Number": 0.49944568455488353,
+   "Algebra": 0.21226194483524918,
+   "Geometry and Measure": 0.1996344806622248,
+   "Data and Statistics": 0.07561425317612461,
+   "Number+Algebra": 0.003145880665618074,
+   "Number+Geometry and Measure": 0.003188426974573672
+  },
+  "eligibility": ">= 5 tagged and >= 5 untagged answers within student x quiz pairs that mix tagged and untagged",
+  "relpos_note": "relative position within the student x quiz pair, 0 = first answer, 1 = last; order by DateAnswered (minute resolution), ties in original file order"
+ },
+ "designA_pool_difficulty": {
+  "n_students": 1389,
+  "n_with_ge5_untagged": 1250,
+  "p_loo_tagged_minus_untagged": {
+   "n": 1381,
+   "mean": 0.00656076624855662,
+   "median": 0.007217738260409834,
+   "sd": 0.052208654262503845,
+   "q25": -0.021268104237824992,
+   "q75": 0.033250886595309836,
+   "share_positive": 0.5677045619116582,
+   "mean_ci95": [
+    0.003938556933482904,
+    0.009258114354440888
+   ]
+  }
+ },
+ "runtime_seconds": {
+  "load": 6.455926895141602,
+  "total": 31.042064428329468
+ }
+}

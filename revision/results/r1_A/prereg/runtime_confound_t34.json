@@ -1,0 +1,7 @@
+{
+ "stage": "confound",
+ "sample": "t34",
+ "wall_seconds": 1.7271926403045654,
+ "python": "3.12.10",
+ "numpy": "2.4.6"
+}

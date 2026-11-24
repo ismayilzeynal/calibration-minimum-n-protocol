@@ -1,0 +1,112 @@
+{
+ "what": "accuracy of confidence-rated answers at each confidence level (answer level, pooled over students)",
+ "definitions": {
+  "tagged": "Confidence non-missing and in [0, 100] (common.tagged)",
+  "level": "25 * round(Confidence / 25); the release stores 0, 25, 50, 75, 100",
+  "accuracy": "share of answers at that level that are correct (IsCorrect = 1)",
+  "accuracy_minus_confidence": "accuracy - level/100; negative = overconfident at that level, on the coded scale",
+  "answer_level_se_naive": "binomial SE ignoring clustering within students; descriptive only"
+ },
+ "S1": {
+  "n_tagged": 1506052,
+  "n_values_off_grid": 0,
+  "levels": {
+   "0": {
+    "n_answers": 117331,
+    "share_of_tagged": 0.07790634055132227,
+    "n_students": 20519,
+    "accuracy": 0.35746733599815905,
+    "accuracy_minus_confidence": 0.35746733599815905,
+    "answer_level_se_naive": 0.0013991342921149924
+   },
+   "25": {
+    "n_answers": 75600,
+    "share_of_tagged": 0.050197469941276926,
+    "n_students": 19089,
+    "accuracy": 0.38997354497354497,
+    "accuracy_minus_confidence": 0.13997354497354497,
+    "answer_level_se_naive": 0.0017739076644631639
+   },
+   "50": {
+    "n_answers": 233189,
+    "share_of_tagged": 0.1548346272240268,
+    "n_students": 27771,
+    "accuracy": 0.497862249076929,
+    "accuracy_minus_confidence": -0.0021377509230710023,
+    "answer_level_se_naive": 0.00103540916501584
+   },
+   "75": {
+    "n_answers": 343998,
+    "share_of_tagged": 0.22841044001136748,
+    "n_students": 27899,
+    "accuracy": 0.7070855063110832,
+    "accuracy_minus_confidence": -0.042914493688916755,
+    "answer_level_se_naive": 0.0007759405343946103
+   },
+   "100": {
+    "n_answers": 735934,
+    "share_of_tagged": 0.4886511222720065,
+    "n_students": 32294,
+    "accuracy": 0.7985743286762128,
+    "accuracy_minus_confidence": -0.2014256713237872,
+    "answer_level_se_naive": 0.00046751510656290493
+   }
+  },
+  "accuracy_monotone_in_level": true,
+  "accuracy_range_0_to_100": [
+   0.35746733599815905,
+   0.7985743286762128
+  ]
+ },
+ "S2": {
+  "n_tagged": 346428,
+  "n_values_off_grid": 0,
+  "levels": {
+   "0": {
+    "n_answers": 28733,
+    "share_of_tagged": 0.08294075536619441,
+    "n_students": 2769,
+    "accuracy": 0.33466745553892735,
+    "accuracy_minus_confidence": 0.33466745553892735,
+    "answer_level_se_naive": 0.0027837846650359595
+   },
+   "25": {
+    "n_answers": 17405,
+    "share_of_tagged": 0.05024131998568245,
+    "n_students": 2647,
+    "accuracy": 0.38753231829933926,
+    "accuracy_minus_confidence": 0.13753231829933926,
+    "answer_level_se_naive": 0.003692823389911388
+   },
+   "50": {
+    "n_answers": 53043,
+    "share_of_tagged": 0.15311406699227545,
+    "n_students": 3425,
+    "accuracy": 0.4834568180532775,
+    "accuracy_minus_confidence": -0.016543181946722496,
+    "answer_level_se_naive": 0.0021697920917228566
+   },
+   "75": {
+    "n_answers": 87778,
+    "share_of_tagged": 0.25338021176117403,
+    "n_students": 3530,
+    "accuracy": 0.6451274806899223,
+    "accuracy_minus_confidence": -0.10487251931007768,
+    "answer_level_se_naive": 0.0016149761580092944
+   },
+   "100": {
+    "n_answers": 159469,
+    "share_of_tagged": 0.4603236458946736,
+    "n_students": 3862,
+    "accuracy": 0.7327317535069512,
+    "accuracy_minus_confidence": -0.2672682464930488,
+    "answer_level_se_naive": 0.001108174246069732
+   }
+  },
+  "accuracy_monotone_in_level": true,
+  "accuracy_range_0_to_100": [
+   0.33466745553892735,
+   0.7327317535069512
+  ]
+ }
+}

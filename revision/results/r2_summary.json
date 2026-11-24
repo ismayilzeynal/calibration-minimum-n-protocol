@@ -1,0 +1,63 @@
+{
+ "_definitions": {
+  "all_correct_unrated": "Design A pool (>= 200 rated answers) students whose rated answers are all correct; their answers without a rating",
+  "strand_other_S1": "share of all S1 answers whose question carries more than one level-1 strand (combined), one level-1 strand outside the four main strands (minor), or none",
+  "ipw_change": "IPW minus unweighted Spearman-Brown reliability, Design B pool N = 20, on the subsample of confound_selection.py (seed [42, 81, sid])",
+  "mc_se_max": "maximum Monte Carlo SE of the mean over 50 splits",
+  "level_ranges": "min and max of answer-level mean bias across the four main strands (or terms), all rated answers"
+ },
+ "all_correct_unrated": {
+  "S1": {
+   "n_students_all_rated_correct": 53,
+   "n_with_unrated": 53,
+   "unrated_answers": 3079,
+   "pooled_unrated_accuracy": 0.9928548229944787,
+   "students_perfect_on_unrated": 48
+  },
+  "S2": {
+   "n_students_all_rated_correct": 11,
+   "n_with_unrated": 11,
+   "unrated_answers": 2180,
+   "pooled_unrated_accuracy": 0.9935779816513761,
+   "students_perfect_on_unrated": 8
+  }
+ },
+ "strand_other_S1": {
+  "combined": 0.01316630797493044,
+  "minor_single": 0.00410168989497632,
+  "none": 0.0,
+  "main_four_total": 0.9827320021300933
+ },
+ "ipw_change_S1": {
+  "bias": -0.0007823060573504126,
+  "brier": 0.005857387431916883,
+  "gamma": 0.008522129523323707,
+  "auroc": 0.0014630858864680962
+ },
+ "mc_se_max": {
+  "S1": {
+   "resolution_N100_200": 0.00410111185918474,
+   "bias_brier_N_ge_20": 0.002381098674595175,
+   "bias_brier_all_N": 0.004144298396917744
+  },
+  "S2": {
+   "resolution_N100_200": 0.008694487893576125,
+   "bias_brier_N_ge_20": 0.003816538767022966,
+   "bias_brier_all_N": 0.006221057060587325
+  }
+ },
+ "level_ranges": {
+  "S1": {
+   "strand_min": 0.06094534597413676,
+   "strand_max": 0.08332883714070925,
+   "term_min": 0.06549418315601074,
+   "term_max": 0.08053030476495776
+  },
+  "S2": {
+   "strand_min": 0.10322294854296865,
+   "strand_max": 0.15144927536231884,
+   "term_min": 0.10862114760138117,
+   "term_max": 0.1423101215853466
+  }
+ }
+}

@@ -1,0 +1,166 @@
+{
+ "sample": "t34",
+ "accuracy_confound": {
+  "N20": {
+   "bias": {
+    "pearson_vs_acc": -0.5082468046051114,
+    "spearman_vs_acc": -0.49987003745715364,
+    "reliability_raw": 0.7420257807209322,
+    "reliability_acc_partialed": 0.8909962817925627
+   },
+   "brier": {
+    "pearson_vs_acc": -0.6920573168271866,
+    "spearman_vs_acc": -0.7086192670449653,
+    "reliability_raw": 0.5680707937682573,
+    "reliability_acc_partialed": 0.443676410472158
+   },
+   "gamma": {
+    "pearson_vs_acc": -0.032054205496481435,
+    "spearman_vs_acc": 0.06909202435110455,
+    "reliability_raw": 0.04705888138007396,
+    "reliability_acc_partialed": 0.048581519140037346
+   },
+   "auroc": {
+    "pearson_vs_acc": 0.04451890512198327,
+    "spearman_vs_acc": -0.0020657012912432588,
+    "reliability_raw": 0.1462330981828707,
+    "reliability_acc_partialed": 0.14734969732444914
+   },
+   "bias3": {
+    "pearson_vs_acc": -0.45248076132243237,
+    "spearman_vs_acc": -0.4763302292396574,
+    "reliability_raw": 0.7340806363079002,
+    "reliability_acc_partialed": 0.8648254511722452
+   },
+   "top_decile_jaccard_raw_vs_partialed_bias": 0.6417910447761194
+  },
+  "N100": {
+   "bias": {
+    "pearson_vs_acc": -0.3999631643591861,
+    "spearman_vs_acc": -0.4049655621420418,
+    "reliability_raw": 0.9331066478059564,
+    "reliability_acc_partialed": 0.9674995437233388
+   },
+   "brier": {
+    "pearson_vs_acc": -0.7387736097601727,
+    "spearman_vs_acc": -0.7763581771308478,
+    "reliability_raw": 0.8837004754501012,
+    "reliability_acc_partialed": 0.8276459486561144
+   },
+   "gamma": {
+    "pearson_vs_acc": 0.18242526731263367,
+    "spearman_vs_acc": 0.3261146185928317,
+    "reliability_raw": 0.41367961825497085,
+    "reliability_acc_partialed": 0.4024500812899601
+   },
+   "auroc": {
+    "pearson_vs_acc": 0.08734492264068734,
+    "spearman_vs_acc": 0.07481206975058632,
+    "reliability_raw": 0.571500778429905,
+    "reliability_acc_partialed": 0.5690296144322082
+   },
+   "bias3": {
+    "pearson_vs_acc": -0.3342441492021759,
+    "spearman_vs_acc": -0.379433226708436,
+    "reliability_raw": 0.929467139120614,
+    "reliability_acc_partialed": 0.9592683522504066
+   },
+   "top_decile_jaccard_raw_vs_partialed_bias": 0.6923076923076923
+  }
+ },
+ "selection": {
+  "within_student": {
+   "n_students": 3539,
+   "mean_acc_tagged_minus_untagged": 0.07757482315977612,
+   "ci95": [
+    0.07199811439123849,
+    0.08300129241141076
+   ]
+  },
+  "student_level": {
+   "n_reporters": 4284,
+   "n_nonreporters": 634,
+   "acc_mean_rep": 0.5406512891345294,
+   "acc_mean_non": 0.5775582376754437,
+   "d_accuracy": -0.2048882088169508,
+   "logvol_d": 0.942171722614101,
+   "vol_median_rep": 259.0,
+   "vol_median_non": 103.0
+  },
+  "propensity_model": {
+   "coef_std": {
+    "intercept": 2.3359155804756,
+    "acc": -0.10053832468476648,
+    "log10_vol": 0.6715332424327796,
+    "first_month": -0.599187780038215
+   },
+   "se": {
+    "intercept": 0.057547032048636496,
+    "acc": 0.04705039534842429,
+    "log10_vol": 0.053194887547758356,
+    "first_month": 0.04115857527237468
+   },
+   "z": {
+    "acc": -2.1368221019238147,
+    "log10_vol": 12.624018460982311,
+    "first_month": -14.558030157093054
+   },
+   "note": "covariates standardized; coefficients are per-SD log-odds"
+  },
+  "ipw_designB_N20": {
+   "bias": {
+    "unweighted": 0.7150654321354627,
+    "ipw": 0.7139748601423348
+   },
+   "brier": {
+    "unweighted": 0.5947781392029959,
+    "ipw": 0.5938803841041868
+   },
+   "gamma": {
+    "unweighted": 0.12763473880483775,
+    "ipw": 0.12416234576878278
+   },
+   "auroc": {
+    "unweighted": 0.19281461276053086,
+    "ipw": 0.19253683461288346
+   }
+  }
+ },
+ "test_retest": {
+  "n_students": 823,
+  "median_n_winA": 63.0,
+  "median_n_winB": 105.0,
+  "bias": {
+   "r_obs": 0.6311256919652807,
+   "rel_at_median_n": [
+    0.8897714425633056,
+    0.9336847959362566
+   ],
+   "r_disattenuated": 0.6924309714653588
+  },
+  "brier": {
+   "r_obs": 0.5891491535701112,
+   "rel_at_median_n": [
+    0.8289864231078587,
+    0.8881182606140966
+   ],
+   "r_disattenuated": 0.6866195253896186
+  },
+  "gamma": {
+   "r_obs": 0.09134935541462663,
+   "rel_at_median_n": [
+    0.2401120607216075,
+    0.33970262146557834
+   ],
+   "r_disattenuated": 0.31985198518017594
+  },
+  "auroc": {
+   "r_obs": 0.2757062788920033,
+   "rel_at_median_n": [
+    0.4302940940338048,
+    0.565211138717146
+   ],
+   "r_disattenuated": 0.5590602419850201
+  }
+ }
+}

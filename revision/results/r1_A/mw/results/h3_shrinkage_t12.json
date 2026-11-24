@@ -1,0 +1,29 @@
+{
+ "sample": "t12",
+ "n_students": 23825,
+ "min_tagged": 10,
+ "rho_raw": 0.6199672285997192,
+ "rho_eb": 0.6588815872194786,
+ "diff_point": 0.03891435861975945,
+ "diff_ci95": [
+  0.03647815492618833,
+  0.04122663311097658
+ ],
+ "diff_lower_1sided95": 0.03691001314498788,
+ "p_onesided_diff_le_0": 0.0,
+ "rho_eb_validation": 0.6333187031052225,
+ "diff_validation_point": 0.013351474505503336,
+ "diff_validation_ci95": [
+  0.012060691140145834,
+  0.014598944895319372
+ ],
+ "diff_validation_lower_1sided95": 0.012231750157008097,
+ "p_onesided_validation_le_0": 0.0,
+ "jaccard_top_decile_raw": 0.2831270043024064,
+ "jaccard_top_decile_eb": 0.3155858319948672,
+ "jaccard_validation_raw": 0.2831270043024064,
+ "jaccard_validation_eb": 0.2581377163321177,
+ "R": 50,
+ "B": 1000,
+ "seed": 42
+}

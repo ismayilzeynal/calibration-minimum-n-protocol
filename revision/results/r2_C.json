@@ -1,0 +1,507 @@
+{
+ "_definitions": {
+  "levels": "answer-level means over rated answers; bias = mean confidence (0-1) minus accuracy; difficulty quintile 0 = hardest (lowest leave-one-out item proportion correct)",
+  "within_student_halves_N20": "Design A pool, 20-answer subsample, two 10-answer halves; share of students whose +.15 flag (bias above +.15) differs between halves, mean over 50 repetitions; difficulty_harder_A: half A = harder half",
+  "term": "approximate English school term from the calendar month (Autumn Sep-Dec, Spring Jan-Mar, Summer Apr-Aug)"
+ },
+ "S1": {
+  "sample": "t12",
+  "n_poolA": 1389,
+  "N": 20,
+  "levels": {
+   "all_rated": {
+    "overall": {
+     "n_answers": 1506052,
+     "mean_bias": 0.07368470676975297
+    },
+    "difficulty_quintile": {
+     "0": {
+      "n_answers": 292142,
+      "share_answers": 0.19397869396275827,
+      "mean_confidence": 0.6387279033660889,
+      "accuracy": 0.4264022290529948,
+      "mean_bias": 0.2123256840851367
+     },
+     "1": {
+      "n_answers": 292436,
+      "share_answers": 0.19417390634586323,
+      "mean_confidence": 0.7000600099563599,
+      "accuracy": 0.5844218906017044,
+      "mean_bias": 0.11563812252937394
+     },
+     "2": {
+      "n_answers": 302240,
+      "share_answers": 0.20068364173348596,
+      "mean_confidence": 0.7523226737976074,
+      "accuracy": 0.6898590524086818,
+      "mean_bias": 0.062463605082053994
+     },
+     "3": {
+      "n_answers": 313898,
+      "share_answers": 0.20842441031252573,
+      "mean_confidence": 0.7991369962692261,
+      "accuracy": 0.7799699265366457,
+      "mean_bias": 0.019167054266035464
+     },
+     "4": {
+      "n_answers": 305336,
+      "share_answers": 0.20273934764536683,
+      "mean_confidence": 0.8511132001876831,
+      "accuracy": 0.8831058244032803,
+      "mean_bias": -0.031992624518563155
+     }
+    },
+    "strand": {
+     "Algebra": {
+      "n_answers": 297336,
+      "share_answers": 0.1974274460642793,
+      "mean_confidence": 0.6912121176719666,
+      "accuracy": 0.624179379557134,
+      "mean_bias": 0.06703275082734685
+     },
+     "Combined or other": {
+      "n_answers": 16827,
+      "share_answers": 0.011172920988119932,
+      "mean_confidence": 0.6528792977333069,
+      "accuracy": 0.5689071135674808,
+      "mean_bias": 0.08397218755571403
+     },
+     "Data and Statistics": {
+      "n_answers": 103158,
+      "share_answers": 0.06849564291272811,
+      "mean_confidence": 0.7350763082504272,
+      "accuracy": 0.6741309447643421,
+      "mean_bias": 0.06094534597413676
+     },
+     "Geometry and Measure": {
+      "n_answers": 278013,
+      "share_answers": 0.1845972117828601,
+      "mean_confidence": 0.7248096466064453,
+      "accuracy": 0.6414807940635869,
+      "mean_bias": 0.08332883714070925
+     },
+     "Number": {
+      "n_answers": 810718,
+      "share_answers": 0.5383067782520126,
+      "mean_confidence": 0.7839757204055786,
+      "accuracy": 0.7097511095103353,
+      "mean_bias": 0.07422463791355317
+     }
+    },
+    "term": {
+     "2018/19 Spring": {
+      "n_answers": 262038,
+      "share_answers": 0.17399000831312597,
+      "mean_confidence": 0.7175142765045166,
+      "accuracy": 0.6369839488929087,
+      "mean_bias": 0.08053030476495776
+     },
+     "2018/19 Summer": {
+      "n_answers": 198755,
+      "share_answers": 0.1319708748436309,
+      "mean_confidence": 0.7412869930267334,
+      "accuracy": 0.6616638575130186,
+      "mean_bias": 0.07962315413448719
+     },
+     "2019/20 Autumn": {
+      "n_answers": 568968,
+      "share_answers": 0.37778775234852446,
+      "mean_confidence": 0.7500610947608948,
+      "accuracy": 0.6824267797134461,
+      "mean_bias": 0.06763429577761843
+     },
+     "2019/20 Spring": {
+      "n_answers": 375721,
+      "share_answers": 0.24947412174347233,
+      "mean_confidence": 0.768309473991394,
+      "accuracy": 0.6911857468706833,
+      "mean_bias": 0.07712371680049825
+     },
+     "2019/20 Summer": {
+      "n_answers": 100570,
+      "share_answers": 0.0667772427512463,
+      "mean_confidence": 0.7820001244544983,
+      "accuracy": 0.7165059162772198,
+      "mean_bias": 0.06549418315601074
+     }
+    }
+   },
+   "designA_pool": {
+    "overall": {
+     "n_answers": 420641,
+     "mean_bias": 0.08349340649152127
+    },
+    "difficulty_quintile": {
+     "0": {
+      "n_answers": 79243,
+      "share_answers": 0.18838629615277636,
+      "mean_confidence": 0.7143785357475281,
+      "accuracy": 0.47581489847683706,
+      "mean_bias": 0.2385636586196888
+     },
+     "1": {
+      "n_answers": 83065,
+      "share_answers": 0.19747242898338488,
+      "mean_confidence": 0.7636730074882507,
+      "accuracy": 0.6366821164148558,
+      "mean_bias": 0.12699091073255883
+     },
+     "2": {
+      "n_answers": 88122,
+      "share_answers": 0.20949455711640091,
+      "mean_confidence": 0.8098062872886658,
+      "accuracy": 0.7422210117791244,
+      "mean_bias": 0.06758527949887656
+     },
+     "3": {
+      "n_answers": 88256,
+      "share_answers": 0.20981311855002246,
+      "mean_confidence": 0.8492708802223206,
+      "accuracy": 0.8307763778100072,
+      "mean_bias": 0.018494493292240753
+     },
+     "4": {
+      "n_answers": 81955,
+      "share_answers": 0.19483359919741539,
+      "mean_confidence": 0.8908516764640808,
+      "accuracy": 0.9142822280519798,
+      "mean_bias": -0.023430541150631444
+     }
+    },
+    "strand": {
+     "Algebra": {
+      "n_answers": 77029,
+      "share_answers": 0.18312290052562635,
+      "mean_confidence": 0.7436647415161133,
+      "accuracy": 0.6561554739124226,
+      "mean_bias": 0.08750924976307624
+     },
+     "Combined or other": {
+      "n_answers": 3425,
+      "share_answers": 0.00814233515040141,
+      "mean_confidence": 0.6607299447059631,
+      "accuracy": 0.569051094890511,
+      "mean_bias": 0.09167883211678832
+     },
+     "Data and Statistics": {
+      "n_answers": 26077,
+      "share_answers": 0.061993481377231416,
+      "mean_confidence": 0.7965735793113708,
+      "accuracy": 0.7219005253671819,
+      "mean_bias": 0.07467308356022549
+     },
+     "Geometry and Measure": {
+      "n_answers": 70610,
+      "share_answers": 0.1678628569255018,
+      "mean_confidence": 0.7821696400642395,
+      "accuracy": 0.6832318368503045,
+      "mean_bias": 0.09893782750318651
+     },
+     "Number": {
+      "n_answers": 243500,
+      "share_answers": 0.5788784260212391,
+      "mean_confidence": 0.837046205997467,
+      "accuracy": 0.7584722792607803,
+      "mean_bias": 0.07857392197125257
+     }
+    },
+    "term": {
+     "2018/19 Spring": {
+      "n_answers": 35341,
+      "share_answers": 0.08401701213148505,
+      "mean_confidence": 0.7818114757537842,
+      "accuracy": 0.7028380634390651,
+      "mean_bias": 0.07897343029342689
+     },
+     "2018/19 Summer": {
+      "n_answers": 56075,
+      "share_answers": 0.13330845067409025,
+      "mean_confidence": 0.7850691080093384,
+      "accuracy": 0.6954079358002675,
+      "mean_bias": 0.08966116807846634
+     },
+     "2019/20 Autumn": {
+      "n_answers": 168034,
+      "share_answers": 0.3994712831131535,
+      "mean_confidence": 0.8137862086296082,
+      "accuracy": 0.7400585595772284,
+      "mean_bias": 0.07372763845412238
+     },
+     "2019/20 Spring": {
+      "n_answers": 139023,
+      "share_answers": 0.33050273273408914,
+      "mean_confidence": 0.8103461265563965,
+      "accuracy": 0.7168813793401092,
+      "mean_bias": 0.09346475043697805
+     },
+     "2019/20 Summer": {
+      "n_answers": 22168,
+      "share_answers": 0.05270052134718204,
+      "mean_confidence": 0.8262134790420532,
+      "accuracy": 0.73962468422952,
+      "mean_bias": 0.08658877661494045
+     }
+    }
+   },
+   "difficulty_quintile_edges_p_loo": [
+    0.5048322910744741,
+    0.6042780748663101,
+    0.6935749588138386,
+    0.7827868852459017
+   ]
+  },
+  "within_student_halves_N20": {
+   "random": {
+    "share_students_flag15_differs": 0.2787616990640749,
+    "mean_bias_halfA_minus_halfB": 6.119510439164889e-05,
+    "sd_over_students_bias_halfA_minus_halfB": 0.02674872129799668,
+    "mean_abs_bias_difference": 0.1442829373650108,
+    "share_flagged_halfA": 0.33439884809215265,
+    "share_flagged_halfB": 0.33785457163426924,
+    "bias_r_SB": 0.7535643092606885
+   },
+   "term": {
+    "share_students_flag15_differs": 0.2886681065514759,
+    "mean_bias_halfA_minus_halfB": 0.00016126709863210963,
+    "sd_over_students_bias_halfA_minus_halfB": 0.026850341394020243,
+    "mean_abs_bias_difference": 0.15190856731461483,
+    "share_flagged_halfA": 0.3398704103671706,
+    "share_flagged_halfB": 0.33730741540676745,
+    "bias_r_SB": 0.7271040114500225
+   },
+   "difficulty_harder_A": {
+    "share_students_flag15_differs": 0.36645068394528435,
+    "mean_bias_halfA_minus_halfB": 0.14645428365730742,
+    "sd_over_students_bias_halfA_minus_halfB": 0.20017672729872,
+    "mean_abs_bias_difference": 0.19249460043196545,
+    "share_flagged_halfA": 0.47444204463642914,
+    "share_flagged_halfB": 0.18286537077033838,
+    "bias_r_SB": 0.7355488234917144
+   }
+  },
+  "regression_bias_r20_vs_stream_C_max_abs_diff": 0.0,
+  "runtime_seconds": 10.2
+ },
+ "S2": {
+  "sample": "t34",
+  "n_poolA": 554,
+  "N": 20,
+  "levels": {
+   "all_rated": {
+    "overall": {
+     "n_answers": 346428,
+     "mean_bias": 0.11746813190619695
+    },
+    "difficulty_quintile": {
+     "0": {
+      "n_answers": 60087,
+      "share_answers": 0.1734472964079116,
+      "mean_confidence": 0.650785505771637,
+      "accuracy": 0.3401068450746418,
+      "mean_bias": 0.3106786825769301
+     },
+     "1": {
+      "n_answers": 63070,
+      "share_answers": 0.18205803226067177,
+      "mean_confidence": 0.6897574067115784,
+      "accuracy": 0.5059933407325194,
+      "mean_bias": 0.1837640716664024
+     },
+     "2": {
+      "n_answers": 71594,
+      "share_answers": 0.20666343367164317,
+      "mean_confidence": 0.7241703271865845,
+      "accuracy": 0.6116434338073022,
+      "mean_bias": 0.1125268877280219
+     },
+     "3": {
+      "n_answers": 74250,
+      "share_answers": 0.21433025044165022,
+      "mean_confidence": 0.7784545421600342,
+      "accuracy": 0.7200808080808081,
+      "mean_bias": 0.058373737373737376
+     },
+     "4": {
+      "n_answers": 77427,
+      "share_answers": 0.22350098721812325,
+      "mean_confidence": 0.8255776166915894,
+      "accuracy": 0.8508143154196857,
+      "mean_bias": -0.025236674545055342
+     }
+    },
+    "strand": {
+     "Algebra": {
+      "n_answers": 57228,
+      "share_answers": 0.16519449928989574,
+      "mean_confidence": 0.7089099884033203,
+      "accuracy": 0.5871950793317956,
+      "mean_bias": 0.12171489480673796
+     },
+     "Geometry and Measure": {
+      "n_answers": 80385,
+      "share_answers": 0.23203955800339465,
+      "mean_confidence": 0.7590875029563904,
+      "accuracy": 0.6076382409653542,
+      "mean_bias": 0.15144927536231884
+     },
+     "Number": {
+      "n_answers": 208815,
+      "share_answers": 0.6027659427067096,
+      "mean_confidence": 0.740303635597229,
+      "accuracy": 0.6370806694921342,
+      "mean_bias": 0.10322294854296865
+     }
+    },
+    "term": {
+     "2019/20 Autumn": {
+      "n_answers": 233426,
+      "share_answers": 0.6738081217453554,
+      "mean_confidence": 0.7358691692352295,
+      "accuracy": 0.6272480357800759,
+      "mean_bias": 0.10862114760138117
+     },
+     "2019/20 Spring": {
+      "n_answers": 100336,
+      "share_answers": 0.2896301684621335,
+      "mean_confidence": 0.7451438307762146,
+      "accuracy": 0.6102296284484133,
+      "mean_bias": 0.13491418832722055
+     },
+     "2019/20 Summer": {
+      "n_answers": 12666,
+      "share_answers": 0.036561709792511,
+      "mean_confidence": 0.761053204536438,
+      "accuracy": 0.6187430917416706,
+      "mean_bias": 0.1423101215853466
+     }
+    }
+   },
+   "designA_pool": {
+    "overall": {
+     "n_answers": 192566,
+     "mean_bias": 0.1253193710208448
+    },
+    "difficulty_quintile": {
+     "0": {
+      "n_answers": 36210,
+      "share_answers": 0.18803942544374397,
+      "mean_confidence": 0.6780033111572266,
+      "accuracy": 0.35396299364816347,
+      "mean_bias": 0.3240403203534935
+     },
+     "1": {
+      "n_answers": 37833,
+      "share_answers": 0.1964677045792092,
+      "mean_confidence": 0.7134974598884583,
+      "accuracy": 0.521211640631195,
+      "mean_bias": 0.19228583511749003
+     },
+     "2": {
+      "n_answers": 39701,
+      "share_answers": 0.20616827477332447,
+      "mean_confidence": 0.7434573173522949,
+      "accuracy": 0.6313946751970984,
+      "mean_bias": 0.11206266844663862
+     },
+     "3": {
+      "n_answers": 39621,
+      "share_answers": 0.20575283279498977,
+      "mean_confidence": 0.7934491634368896,
+      "accuracy": 0.7412988061886373,
+      "mean_bias": 0.05215037480124177
+     },
+     "4": {
+      "n_answers": 39201,
+      "share_answers": 0.2035717624087326,
+      "mean_confidence": 0.8319876790046692,
+      "accuracy": 0.8674778704624883,
+      "mean_bias": -0.035490166067192165
+     }
+    },
+    "strand": {
+     "Algebra": {
+      "n_answers": 39109,
+      "share_answers": 0.20309400413364767,
+      "mean_confidence": 0.7188243269920349,
+      "accuracy": 0.5978163594057634,
+      "mean_bias": 0.12100795213377995
+     },
+     "Geometry and Measure": {
+      "n_answers": 50486,
+      "share_answers": 0.26217504647757134,
+      "mean_confidence": 0.7672671675682068,
+      "accuracy": 0.6133779661688389,
+      "mean_bias": 0.15388919700511033
+     },
+     "Number": {
+      "n_answers": 102971,
+      "share_answers": 0.534730949388781,
+      "mean_confidence": 0.760053813457489,
+      "accuracy": 0.6471045245748803,
+      "mean_bias": 0.11294927698089753
+     }
+    },
+    "term": {
+     "2019/20 Autumn": {
+      "n_answers": 118676,
+      "share_answers": 0.6162874027606119,
+      "mean_confidence": 0.748327374458313,
+      "accuracy": 0.6338939633961373,
+      "mean_bias": 0.11443341534935454
+     },
+     "2019/20 Spring": {
+      "n_answers": 66368,
+      "share_answers": 0.3446506652264678,
+      "mean_confidence": 0.758991539478302,
+      "accuracy": 0.6208564368370298,
+      "mean_bias": 0.13813509522661524
+     },
+     "2019/20 Summer": {
+      "n_answers": 7522,
+      "share_answers": 0.03906193201292025,
+      "mean_confidence": 0.7884870767593384,
+      "accuracy": 0.6044934857750598,
+      "mean_bias": 0.18399361871842596
+     }
+    }
+   },
+   "difficulty_quintile_edges_p_loo": [
+    0.39544025157232704,
+    0.49120549120549123,
+    0.5812274368231047,
+    0.6794648051192553
+   ]
+  },
+  "within_student_halves_N20": {
+   "random": {
+    "share_students_flag15_differs": 0.31985559566787,
+    "mean_bias_halfA_minus_halfB": 8.483754512635406e-05,
+    "sd_over_students_bias_halfA_minus_halfB": 0.028836478951633313,
+    "mean_abs_bias_difference": 0.16266425992779782,
+    "share_flagged_halfA": 0.43324909747292417,
+    "share_flagged_halfB": 0.4344765342960288,
+    "bias_r_SB": 0.7420257807209322
+   },
+   "term": {
+    "share_students_flag15_differs": 0.3242960288808664,
+    "mean_bias_halfA_minus_halfB": 0.002335740072202166,
+    "sd_over_students_bias_halfA_minus_halfB": 0.02933856593117594,
+    "mean_abs_bias_difference": 0.17075812274368232,
+    "share_flagged_halfA": 0.42967509025270756,
+    "share_flagged_halfB": 0.42595667870036097,
+    "bias_r_SB": 0.7186367896028705
+   },
+   "difficulty_harder_A": {
+    "share_students_flag15_differs": 0.4169675090252707,
+    "mean_bias_halfA_minus_halfB": 0.17775270758122744,
+    "sd_over_students_bias_halfA_minus_halfB": 0.21825142327829006,
+    "mean_abs_bias_difference": 0.22811371841155234,
+    "share_flagged_halfA": 0.5830324909747292,
+    "share_flagged_halfB": 0.2454873646209386,
+    "bias_r_SB": 0.7208574392027325
+   }
+  },
+  "regression_bias_r20_vs_stream_C_max_abs_diff": 1.1102230246251565e-16,
+  "runtime_seconds": 1.1
+ }
+}

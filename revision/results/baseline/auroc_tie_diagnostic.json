@@ -1,0 +1,104 @@
+{
+ "rule_source": "scripts/indices.py lines 45-46",
+ "note": "cells = students (full set) or students x 50 splits (halves); Design A pools from the submitted run's cache",
+ "t12": {
+  "full20": {
+   "cells": 1389,
+   "share_gamma_undefined": 0.2044636429085673,
+   "share_auroc_undefined": 0.09863210943124551,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.10583153347732181,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfA20": {
+   "cells": 69450,
+   "share_gamma_undefined": 0.3115478761699064,
+   "share_auroc_undefined": 0.16722822174226062,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.1443196544276458,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfB20": {
+   "cells": 69450,
+   "share_gamma_undefined": 0.3121238300935925,
+   "share_auroc_undefined": 0.16764578833693305,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.14447804175665946,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "full100": {
+   "cells": 1389,
+   "share_gamma_undefined": 0.09143268538516919,
+   "share_auroc_undefined": 0.04679625629949604,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.04463642908567315,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfA100": {
+   "cells": 69450,
+   "share_gamma_undefined": 0.12469402447804176,
+   "share_auroc_undefined": 0.06069114470842333,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.06400287976961844,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfB100": {
+   "cells": 69450,
+   "share_gamma_undefined": 0.1224046076313895,
+   "share_auroc_undefined": 0.05858891288696904,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.06381569474442045,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  }
+ },
+ "t34": {
+  "full20": {
+   "cells": 554,
+   "share_gamma_undefined": 0.09747292418772563,
+   "share_auroc_undefined": 0.02888086642599278,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.06859205776173286,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfA20": {
+   "cells": 27700,
+   "share_gamma_undefined": 0.17873646209386282,
+   "share_auroc_undefined": 0.06462093862815885,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.11411552346570397,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfB20": {
+   "cells": 27700,
+   "share_gamma_undefined": 0.17823104693140795,
+   "share_auroc_undefined": 0.06303249097472924,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.1151985559566787,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "full100": {
+   "cells": 554,
+   "share_gamma_undefined": 0.036101083032490974,
+   "share_auroc_undefined": 0.021660649819494584,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.01444043321299639,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfA100": {
+   "cells": 27700,
+   "share_gamma_undefined": 0.050144404332129966,
+   "share_auroc_undefined": 0.021985559566787004,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.02815884476534296,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  },
+  "halfB100": {
+   "cells": 27700,
+   "share_gamma_undefined": 0.05018050541516245,
+   "share_auroc_undefined": 0.022021660649819495,
+   "share_auroc_exactly_0.5_where_gamma_undefined": 0.02815884476534296,
+   "share_gamma_nan_auroc_defined_not_0.5": 0.0,
+   "share_auroc_nan_gamma_defined": 0.0
+  }
+ }
+}

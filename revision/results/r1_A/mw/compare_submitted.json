@@ -1,0 +1,31 @@
+{
+ "wall_seconds": 8.872375726699829,
+ "confound_selection_t12": {
+  "numeric_fields": 92,
+  "skipped_auroc_fields": 0,
+  "max_abs_diff": 6.106226635438361e-16,
+  "argmax": "selection.student_level.d_accuracy",
+  "mismatches": [],
+  "n_mismatches": 0,
+  "pass": true
+ },
+ "confound_selection_t34": {
+  "numeric_fields": 92,
+  "skipped_auroc_fields": 0,
+  "max_abs_diff": 0.0,
+  "argmax": null,
+  "mismatches": [],
+  "n_mismatches": 0,
+  "pass": true
+ },
+ "confirmatory_stats": {
+  "numeric_fields": 38,
+  "skipped_auroc_fields": 0,
+  "max_abs_diff": 0.0,
+  "argmax": null,
+  "mismatches": [],
+  "n_mismatches": 0,
+  "pass": true
+ },
+ "all_pass": true
+}
