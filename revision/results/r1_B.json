@@ -46,7 +46,7 @@
  "not_computable": {
   "gamma_auroc_alpha": "Not defined. Gamma and AUROC are pair-count ratios over a student's correct-incorrect pairs, not sums or means of item-level scores, so there is no item-level score whose covariance matrix alpha or a variance-components model could use. Not approximated.",
   "gamma_auroc_vc": "Not defined for the same reason.",
-  "s1_alpha": "Not computed. No S1 quiz has >= 100 students who rated every item; the largest has 70 students with 5 items (feasibility block). S1 numbers stay out of the manuscript.",
+  "s1_alpha": "Not computed. No S1 quiz has >= 100 students who rated every item; the largest has 70 students with 5 items (feasibility block).",
   "temporal_split": "Not part of stream B: the variance-components model assumes exchangeable responses, which temporal halves violate by design."
  },
  "auroc_rule_independence": "bias and Brier do not use the AUROC/gamma tie rule; every number here is unaffected by stream A.",

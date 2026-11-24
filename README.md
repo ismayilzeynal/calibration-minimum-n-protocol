@@ -26,8 +26,9 @@ Number of rated answers per student at which split-half reliability
 at every N; B: every student with at least N rated answers). Temporal halves
 (a student's earlier versus later answers) are Design A, both samples. AUROC
 under the plan rule (undefined whenever gamma is undefined) is primary; the
-Mann-Whitney tie convention, which gives .50 to a student with one constant
-rating, is a sensitivity analysis.
+Mann-Whitney tie convention, which gives .50 to a student whose answers are
+mixed in correctness but all carry the same rating, is a sensitivity
+analysis.
 
 | Index | .70, random halves | .80, random halves | .70, temporal halves | .80, temporal halves |
 |---|---|---|---|---|
@@ -48,17 +49,27 @@ student pool; the protocol is meant to be rerun locally.
 - `analysis_plan.md`: the pre-specified analysis plan, frozen on 2026-07-09
   before any inferential analysis, with dated, append-only addenda.
   Addenda 1 and 2 were part of version 1.0.0; Addendum 3 (2026-11-24)
-  records the analyses added after the editor's decision. The first
-  15,027 bytes of the file are byte-identical to version 1.0.0. The title
+  records the analyses added after the editor's decision; Addendum 4
+  (2026-11-24) records the Monte Carlo and pre-specified-grid checks, the
+  crossed-subset comparison with ICC(1,k), the AUROC minus gamma
+  differences, and two further exploratory analyses (where rating occurs;
+  the flag table at 60 answers). The first 15,027 bytes of the file are
+  byte-identical to version 1.0.0, and each addendum was appended without
+  changing the text before it. The title
   line keeps the term "pre-registered" used at the original submission;
   because the plan was first made public with that submission, the revised
   manuscript calls it pre-specified.
 - `scripts/`, `results/`: original pipeline and aggregates (version 1.0.0).
 - `revision/scripts/`: revision analyses (exploratory, recorded in
-  Addendum 3) and reruns of the original code under the plan's AUROC rule.
+  Addenda 3 and 4) and reruns of the original code under the plan's AUROC
+  rule.
 - `revision/results/`: aggregate outputs (the summary files `r1_*.json`
   and `r2_*.json` carry a definitions block; CSV reliability curves;
-  figures).
+  figures). `figures_r2/` holds Figures 1 to 3 of the revised manuscript;
+  `figures/` holds Figure S1 of the Supplementary Notes and earlier
+  versions of Figures 1 to 3. `r2_E_parts/` holds the Monte Carlo
+  components per sample and design (values per random split and per
+  further subsample draw, each already aggregated over students).
 - `revision/Supplementary_Notes.md`: Supplementary Notes S1 to S4 of the
   revised manuscript.
 
@@ -70,7 +81,14 @@ components, coefficient alpha, standard error of measurement), C (rated
 versus unrated answers, reweighting, halves by content, difficulty and term),
 D (what the bias score is made of; flag stability), and `r2_*` (bootstrap
 intervals over all draws, guess-corrected coding, pool sensitivity, level of
-bias, flag rules, figures).
+bias, flag rules, figures). Within `r2_*`, the Addendum 4 checks are
+`r2_E_*` (Monte Carlo error from the random splits and from the single
+subsample draw per student), `r2_F_grid.py` (crossings on the
+pre-specified grid, the crossed-subset comparison with ICC(1,k), AUROC
+minus gamma) and `r2_H_report.py` (assembles them); `r2_G_figures.py` and
+`r3_figures.py` produce the final Figures 1 and 3. The two exploratory
+analyses of Addendum 4 come from `r1_C_selection.py` (where rating occurs)
+and `r1_D_construct_flags.py` (the flag table at 60 answers).
 
 Not included: row-level data and anything derived per student. The
 per-student cache arrays (`data/cache/designA_*.npz`: split-half values per
@@ -167,7 +185,26 @@ python -B revision/scripts/r2_C_levels.py
 python -B revision/scripts/r2_D_flags.py
 python -B revision/scripts/r2_summary.py
 python -B revision/scripts/r2_figures.py
+
+# Addendum 4: Monte Carlo error, pre-specified grid, crossed subset, AUROC minus gamma
+python -B revision/scripts/r2_E_mc_designA.py t12
+python -B revision/scripts/r2_E_mc_designA.py t34
+python -B revision/scripts/r2_E_mc_designB.py t12
+python -B revision/scripts/r2_E_mc_designB.py t34
+python -B revision/scripts/r2_E_mc_structured.py t12
+python -B revision/scripts/r2_E_mc_structured.py t34
+python -B revision/scripts/r2_F_grid.py        # reads r2_E_parts/designA_*.json
+python -B revision/scripts/r2_H_report.py
+
+# final Figures 1 and 3 (revision/results/figures_r2)
+python -B revision/scripts/r2_G_figures.py
+python -B revision/scripts/r3_figures.py
 ```
+
+`r2_G_figures.py` must run before `r3_figures.py`, and neither
+`r2_G_figures.py` nor `r2_figures.py` may be rerun after `r3_figures.py`:
+they restore the earlier y-axis limits (and `r2_G_figures.py` copies the
+earlier Figure 3 back).
 
 The revision reruns used Python 3.12.10 with
 `revision/scripts/requirements.txt` (numpy 2.4.6, scipy 1.18.1; the original

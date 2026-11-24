@@ -1,0 +1,42 @@
+{
+ "_definitions": {
+  "written_by": "scripts/r3_figures.py (fix round 5); supersedes the check written by r2_G_figures.py",
+  "max_abs_diff_vs_r2_A": "largest absolute difference between any plotted value (points and CI bands) and results/r2_A.json",
+  "inside_ylim": "every plotted point and band lies strictly inside the y-limits (nothing clipped)",
+  "fig2_byte_identical": "sha256 of figures_r2/fig2 equals that of results/figures/fig2 (Figure 2 unchanged)"
+ },
+ "fig1": {
+  "max_abs_diff_vs_r2_A": 0.0,
+  "lowest_plotted": -0.2505183853054305,
+  "highest_plotted": 0.9728772704108591,
+  "ylim": [
+   -0.3,
+   1.0
+  ],
+  "inside_ylim": true
+ },
+ "fig3": {
+  "S1": {
+   "max_abs_diff_vs_r2_A": 0.0,
+   "lowest_plotted": -0.02444186642428701,
+   "highest_plotted": 0.9696877513395613,
+   "ylim": [
+    -0.2,
+    1.22
+   ],
+   "inside_ylim": true
+  },
+  "S2": {
+   "max_abs_diff_vs_r2_A": 0.0,
+   "lowest_plotted": -0.10387682666138702,
+   "highest_plotted": 0.9668178941199642,
+   "ylim": [
+    -0.2,
+    1.22
+   ],
+   "inside_ylim": true
+  }
+ },
+ "fig2_byte_identical": true,
+ "all_pass": true
+}
