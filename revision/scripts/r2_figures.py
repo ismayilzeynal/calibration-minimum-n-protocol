@@ -135,7 +135,7 @@ def figS1():
     ebv = [vals[s]["rho_eb_validation"] for s in ("t12", "t34")]
     nul = [nulls[s]["null_rho_eb"] for s in ("t12", "t34")]
     ax.bar(xs - w, raw, w, color="#9dbfe3", label="Raw bias")
-    ax.bar(xs, eb, w, color=COL["bias"], label="Shrunken, pre-registered metric (inflated; see null)")
+    ax.bar(xs, eb, w, color=COL["bias"], label="Shrunken, pre-specified metric (inflated; see null)")
     ax.bar(xs + w, ebv, w, color="#1baf7a", label="Shrunken, validation metric (other half raw)")
     for i in range(2):
         ax.text(i - w, raw[i] + 0.012, f"{raw[i]:.3f}", ha="center", fontsize=8)
